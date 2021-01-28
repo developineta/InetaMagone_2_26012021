@@ -66,7 +66,62 @@ header h1 {
 header p {
   margin-top: 10px;
   padding-top: 0px;
+  margin-bottom: 20px;
 }
+
+#recherche {
+  position: relative;
+  display: flex;
+  width: 420px;
+  height: 50px;
+}
+#recherche i {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #f2f2f2;
+}
+#recherche form {
+  border: 1px #f2f2f2 solid;
+  background-color: none;
+}
+#champ_recherche {
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.97em;
+  font-weight: bold;
+  padding-left: 10px;
+}
+#boutton {
+  border: 1px #0065fc solid;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #0065fc;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.97em;
+  color: #ffffff;
+}
+#icone_map:nth-child(1) {
+  flex: 0.9;
+}
+#champ_recherche:nth-child(2) {
+  flex: 4;
+}
+#boutton:nth-child(3) {
+  flex: 2.1;
+}
+
 #filtres {
+  display: flex;
+}
+#economique {
+  display: flex;
+}
+#familial {
+  display: flex;
+}
+#romantique {
+  display: flex;
+}
+#animaux {
   display: flex;
 }
