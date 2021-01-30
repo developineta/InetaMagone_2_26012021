@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Reservia</title>
         <link rel="stylesheet" href="style.css" type = "text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet" type="text/css">
         <script src="https://kit.fontawesome.com/d034506d63.js" crossorigin="anonymous"></script>
 	</head>
@@ -15,9 +15,9 @@
                     <img src="images/logo/Reservia_3x.png" alt="Logo de Reservia" />
                     <nav>
                         <ul>
-                            <li><a href="#hebergements" class="top_nav">Hébergements</a></li>
-                            <li><a href="#activites" class="top_nav">Activités</a></li>
-                            <li><a href="#" class="top_nav"><strong>S'inscrire</strong></a></li>
+                            <li><a href="#hebergements" class="top_nav" id="hebergements_option">Hébergements</a></li>
+                            <li><a href="#activites" class="top_nav" id="activites_option">Activités</a></li>
+                            <li><a href="#" class="top_nav" id="sinscrire_option"><strong>S'inscrire</strong></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -35,34 +35,34 @@
                 <div id="filtres">
                     <h2>Filtres</h2>
                     <ul>
-                        <li id="economique">
-                          <i class="fas fa-money-bill"></i>
-                          <span>Economique</span>
+                        <li class="champs_filtres" id="economique">
+                            <i class="fas fa-money-bill-wave" id="icone_eco"></i>
+                            <span class="texte_filtre">Économique</span>
                         </li>
-                        <li id="familial">
-                          <i class="fas fas fa-child"></i>
-                          <span>Familial</span>
+                        <li class="champs_filtres" id="familial">
+                            <i class="fas fas fa-child" id="icone_child"></i>
+                            <span class="texte_filtre">Familial</span>
                         </li>
-                        <li id="romantique">
-                          <i class="fas fa-heart"></i>
-                          <span>Romantique</span>
+                        <li class="champs_filtres" id="romantique">
+                            <i class="fas fa-heart" id="icone_heart"></i>
+                            <span class="texte_filtre" id="texte_romant">Romantique</span>
                         </li>
-                        <li id="animaux">
-                          <i class="fas fa-dog"></i>
-                          <span>Animaux autorisés</span>
+                        <li class="champs_filtres" id="animaux">
+                            <i class="fas fa-dog" id="icone_dog"></i>
+                            <span class="texte_filtre">Animaux autorisés</span>
                         </li>
                     </ul>
                 </div>
 
                 <div id="info">
                     <ul>
-                        <li><i class="fas fa-info-circle"></i></li>
-                        <li><span>Plus de 500 logements sont disponibles dans cette ville</span></li>
+                        <li><i class="fas fa-info"></i></li>
+                        <li><span id="info_texte">Plus de 500 logements sont disponibles dans cette ville</span></li>
                     </ul>
                 </div>
             </section>
 
-            <section>
+            <section id="section_2">
                 <div id="hebergements">
                     <div id="hebergements_marseille">
                         <h1>Hébergements à Marseille</h1>
