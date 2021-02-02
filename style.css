@@ -3,7 +3,7 @@ body {
   color: black;
 }
 #bloc_page {
-  width: 1440px;
+  width: 1340px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,6 @@ header img {
 nav ul {
   list-style-type: none;
   display: flex;
-  padding-right: 100px;
 }
 nav li {
   margin-right: 10px;
@@ -234,7 +233,7 @@ header p {
 #section_2 {
   display: flex;
   height: 626px;
-  width: 1338px;
+  width: 1340px;
   margin-top: 38px;
 }
 #hebergements_marseille:nth-child(1) {
@@ -410,7 +409,7 @@ ul {
   justify-content: space-between;
   flex-wrap: nowrap;
   height: 445px;
-  width: 1338px;
+  width: 1340px;
 }
 .img_activites {
   border-radius: 17px 17px 0px 0px;
@@ -462,4 +461,41 @@ ul {
   border-radius: 22px 22px 22px 22px;
   box-shadow: 13px 2px 28px #d9d9d9;
   color: #000000;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+#footer_content {
+  display: flex;
+  height: 217px;
+  background-color: #f2f2f2;
+  margin-top: 58px;
+  width: 1440px;
+}
+.colonnes_footer h3 {
+  margin-top: 0px;
+  margin-bottom: 6px;
+  font-size: 1.1em;
+}
+.colonnes_footer {
+  width: 455px;
+}
+#footer_content ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  margin-top: 45px;
+}
+#footer_content li {
+  margin-bottom: 14px;
+}
+.colonnes_footer a {
+  text-decoration: none;
+  color: #000000;
+}
+.colonnes_footer a:hover {
+  color: #0065fc;
+  text-decoration: underline;
 }
