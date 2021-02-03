@@ -217,6 +217,7 @@ header p {
   color: #0065fc;
   font-size: 1.2em;
   background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
 }
 #info {
   display: flex;
