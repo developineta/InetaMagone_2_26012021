@@ -94,20 +94,20 @@ header p {
 #section_1 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-content: flex-start;
   height: 190px;
 }
 #recherche_form {
   display: flex;
+  width: 420px;
+  height: 52px;
+}
+#icone_recherche {
+  background-color: #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
 }
 .fa-map-marker-alt {
-  display: flex;
   font-size: 1.1em;
-  background-color: #f2f2f2;
   color: black;
-  border-radius: 15px 0px 0px 15px;
-  width: 34px;
   padding: 18px 0px 6px 18px;
 }
 .champ_recherche {
@@ -115,26 +115,36 @@ header p {
   font-size: 1.1em;
   font-weight: bold;
   text-decoration: none;
+  padding-left: 15px;
   border: 1px solid #f2f2f2;
-  padding: 9px 0px 9px 15px;
+  height: 48px;
 }
 .boutton {
-  background-color: #0065fc;
   color: white;
   font-family: "Raleway", sans-serif;
   font-size: 1.2em;
   font-weight: normal;
   text-decoration: none;
-  border: 1px solid #0065fc;
+  background-color: #0065fc;
   border-radius: 0px 15px 15px 0px;
   border-left: none;
-  padding: 14px 14px 14px 15px;
+  height: 52px;
+  width: 134px;
   cursor: pointer;
+  border: none;
 }
 .boutton:hover {
   background: #0000ff;
 }
-
+#icone_recherche:nth-child(1) {
+  flex: 0.8;
+}
+#texte_recherche:nth-child(2) {
+  flex: 3;
+}
+#boutton_submit:nth-child(3) {
+  flex: 2;
+}
 #filtres {
   display: flex;
   margin-left: 9px;
