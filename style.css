@@ -265,6 +265,9 @@ header p {
   margin-bottom: 22px;
 }
 #hebergements_marseille a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   color: #000000;
   text-decoration: none;
   height: 199px;
@@ -338,7 +341,7 @@ ul {
 }
 #titre_populaires {
   margin-left: 40px;
-  margin-top: 25px;
+  margin-top: 22px;
   margin-right: 40px;
 }
 #titre_populaires ul {
@@ -347,6 +350,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 8px;
 }
 .fa-chart-line {
   color: #000000;
@@ -374,6 +379,9 @@ ul {
   color: #000000;
 }
 #populaires_cartes a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-decoration: none;
   height: 144px;
   border-radius: 22px 22px 22px 22px;
@@ -388,7 +396,6 @@ ul {
 }
 .img_populaires {
   border-radius: 17px 0px 0px 17px;
-  margin-top: 5px;
 }
 .texte_populaires {
   width: 142px;
@@ -397,11 +404,11 @@ ul {
 }
 .texte_populaires h3 {
   flex-wrap: wrap;
-  margin-top: 19px;
+  margin-top: 15px;
   margin-bottom: 6px;
 }
 .texte_populaires h4 {
-  margin-bottom: 39px;
+  margin-bottom: 41px;
   margin-top: 0px;
 }
 .texte_populaires ul {
