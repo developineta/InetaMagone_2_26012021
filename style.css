@@ -4,10 +4,10 @@ body {
 }
 #bloc_page {
   width: 1340px;
+  min-width: 1270px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
 }
 h1 {
   font-size: 1.35em;
@@ -28,7 +28,7 @@ h4 {
 #strong {
   font-weight: bold;
 }
-#premiere_ligne strong {
+#ligne_logo_nav strong {
   font-weight: bold;
   color: #0065fc;
 }
@@ -42,7 +42,7 @@ header {
   height: 196px;
   margin-bottom: 18px;
 }
-#premiere_ligne {
+#ligne_logo_nav {
   display: flex;
   justify-content: space-between;
   margin-top: 52px;
@@ -91,7 +91,7 @@ header p {
   margin-top: 8px;
   padding-top: 0px;
 }
-#section_1 {
+#nav_filtres {
   display: flex;
   flex-direction: column;
   height: 190px;
@@ -215,7 +215,6 @@ header p {
 }
 #filtres span:hover {
   color: #0065fc;
-  font-size: 1.2em;
   background-color: #f2f2f2;
   border: 1px solid #d9d9d9;
 }
@@ -239,11 +238,11 @@ header p {
   margin-right: 11px;
   padding: 5px 9px 6px 9px;
 }
-#section_2 {
+#section_hotels {
   display: flex;
   height: 626px;
   width: 1340px;
-  margin-top: 38px;
+  margin-top: 42px;
 }
 #hebergements_marseille:nth-child(1) {
   flex: 2.1;
@@ -310,6 +309,14 @@ header p {
 }
 .img_marseille {
   border-radius: 17px 17px 0px 0px;
+}
+#cannebiere,
+#hotel_port,
+#hotel_mouettes,
+#hotel-mer,
+#auberge_panier,
+#hotel_amina {
+  display: none;
 }
 .texte_marseille {
   margin-left: 11px;
@@ -414,7 +421,7 @@ ul {
 .texte_populaires ul {
   margin-top: 0px;
 }
-#section_3 {
+#section_activites {
   display: flex;
   flex-direction: column;
   height: 510px;
@@ -430,7 +437,7 @@ ul {
 .img_activites {
   border-radius: 17px 17px 0px 0px;
 }
-#section_3 h3 {
+#section_activites h3 {
   margin-left: 18px;
 }
 .une_image {
@@ -481,6 +488,8 @@ ul {
 footer {
   display: flex;
   justify-content: center;
+  width: 1440px;
+  min-width: 1270px;
 }
 #footer_content {
   display: flex;
@@ -488,6 +497,7 @@ footer {
   background-color: #f2f2f2;
   margin-top: 58px;
   width: 1440px;
+  min-width: 1270px;
 }
 .colonnes_footer h3 {
   margin-top: 0px;
@@ -514,4 +524,155 @@ footer {
 .colonnes_footer a:hover {
   color: #0065fc;
   text-decoration: underline;
+}
+@media all and (min-width: 375px) and (max-width: 480px) {
+  #bloc_page,
+  footer {
+    width: auto;
+  }
+  header {
+    height: auto;
+    display: block;
+    margin-top: 25px;
+    margin-left: 18px;
+  }
+  #ligne_logo_nav {
+    margin-top: 0px;
+    display: block;
+  }
+  header img {
+    margin-top: 0px;
+    margin-right: 5px;
+  }
+  nav {
+    width: auto;
+    margin-top: 10px;
+  }
+  nav li {
+    margin-right: 0px;
+  }
+  .top_nav {
+    padding-top: 0px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #hebergements_option:nth-child(1) {
+    order: 2;
+  }
+  #activites_option:nth-child(2) {
+    order: 3;
+  }
+  #sinscrire_option:nth-child(3) {
+    order: 1;
+  }
+  header h1 {
+  }
+
+  #nav_filtres {
+    height: auto;
+  }
+  #section_hotels {
+    height: auto;
+    display: block;
+  }
+  #hebergements_marseille {
+    display: block;
+    background-color: #ffffff;
+  }
+  #hebergements_marseille a {
+    display: block;
+    width: 336px;
+    height: 199px;
+    margin-bottom: 12px;
+  }
+  #hebergements_marseille a:active {
+    box-shadow: 13px 10px 28px #000000;
+  }
+  #hebergements_cartes {
+    height: auto;
+    width: 375px;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cartes_marseille {
+    height: 199px;
+    width: 336px;
+    margin-bottom: 12px;
+  }
+  .contenu_catre {
+    width: auto;
+  }
+  .img_marseille {
+    display: none;
+  }
+  #cannebiere,
+  #hotel_port,
+  #hotel_mouettes,
+  #hotel-mer,
+  #auberge_panier,
+  #hotel_amina {
+    display: block;
+    border-radius: 17px 17px 0px 0px;
+    padding-top: 5px;
+  }
+  #lien_bas {
+    background: none;
+  }
+  #populaires {
+    width: auto;
+    display: block;
+  }
+  #hebergements_populaires {
+    display: block;
+  }
+  #hebergements_populaires a {
+  }
+  #populaires_cartes {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0px;
+  }
+  .cartes_populaires {
+    height: auto;
+  }
+  #section_activites {
+    height: auto;
+  }
+  #activites {
+    height: auto;
+  }
+  .une_image {
+    height: auto;
+  }
+  #fort_pomegues {
+    height: auto;
+  }
+  #iles_frioul {
+    height: auto;
+  }
+  #nd_garde {
+    height: auto;
+  }
+  #parc_longchamp {
+    height: auto;
+  }
+  footer {
+    width: auto;
+  }
+  #footer_content {
+    height: auto;
+    width: auto;
+  }
+  .colonnes_footer {
+    width: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1269px) {
 }
