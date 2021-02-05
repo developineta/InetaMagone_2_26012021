@@ -437,6 +437,9 @@ ul {
 .img_activites {
   border-radius: 17px 17px 0px 0px;
 }
+.img_activites_mob {
+  display: none;
+}
 #section_activites h3 {
   margin-left: 18px;
 }
@@ -525,7 +528,7 @@ footer {
   color: #0065fc;
   text-decoration: underline;
 }
-@media all and (min-width: 375px) and (max-width: 480px) {
+@media all and (min-width: 0px) and (max-width: 480px) {
   #bloc_page,
   footer {
     width: auto;
@@ -572,6 +575,7 @@ footer {
   }
   #section_hotels {
     height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
   }
@@ -600,13 +604,10 @@ footer {
     margin-bottom: 22px;
   }
   #hebergements_cartes {
+    display: block;
     width: 375px;
     height: auto;
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 0px auto;
   }
   .cartes_marseille {
     width: 335px;
@@ -632,10 +633,6 @@ footer {
   #lien_bas {
     background: none;
   }
-  #populaires {
-    width: auto;
-    display: block;
-  }
   #hebergements_populaires {
     border-radius: unset;
   }
@@ -656,10 +653,7 @@ footer {
     width: 375px;
     height: auto;
     display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 0px auto;
   }
   .cartes_populaires {
     width: 335px;
@@ -672,27 +666,58 @@ footer {
   .img_populaires {
     padding-top: 5px;
   }
+
   #section_activites {
     height: auto;
+    margin-right: 0px;
+  }
+  #section_activites h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   #activites {
+    display: block;
+    width: 375px;
     height: auto;
+    margin: 0px auto 0px auto;
+  }
+  #activites a {
+    display: block;
+    width: 335px;
+    height: 190px;
+    margin-bottom: 10px;
+  }
+  #activites a:active {
+    box-shadow: 13px 10px 28px #6e6e6e;
+  }
+  #populaires_cartes {
+    width: 375px;
+    height: auto;
+    display: block;
+    margin: 0px auto 0px auto;
   }
   .une_image {
-    height: auto;
+    width: 335px;
+    height: 190px;
+    margin-bottom: 10px;
   }
-  #fort_pomegues {
-    height: auto;
-  }
-  #iles_frioul {
-    height: auto;
-  }
-  #nd_garde {
-    height: auto;
-  }
+  #fort_pomegues,
+  #iles_frioul,
+  #nd_garde,
   #parc_longchamp {
-    height: auto;
+    width: 335px;
+    height: 190px;
+    margin-bottom: 10px;
   }
+  .img_activites {
+    display: none;
+  }
+  .img_activites_mob {
+    display: block;
+    border-radius: 17px 17px 0px 0px;
+    margin-right: 0px;
+  }
+
   footer {
     width: auto;
   }
