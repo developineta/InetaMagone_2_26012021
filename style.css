@@ -98,8 +98,10 @@ header p {
 }
 #recherche_form {
   display: flex;
-  width: 420px;
-  height: 52px;
+  max-width: 420px;
+  width: 100%;
+  max-height: 52px;
+  height: 50%;
 }
 #icone_recherche {
   background-color: #f2f2f2;
@@ -135,6 +137,9 @@ header p {
 }
 .boutton:hover {
   background: #0000ff;
+}
+.loupe {
+  display: none;
 }
 #icone_recherche:nth-child(1) {
   flex: 0.8;
@@ -275,6 +280,7 @@ header p {
 }
 #hebergements_marseille a:hover {
   box-shadow: 13px 10px 28px #000000;
+  border-radius: 22px 22px 22px 22px;
 }
 #lien_bas {
   font-family: "Raleway", sans-serif;
@@ -396,6 +402,7 @@ ul {
 }
 #populaires_cartes a:hover {
   box-shadow: 13px 10px 28px #000000;
+  border-radius: 22px 22px 22px 22px;
 }
 .contenu_populaire {
   display: flex;
@@ -430,7 +437,6 @@ ul {
 #activites {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap;
   height: 445px;
   width: 1340px;
 }
@@ -445,8 +451,8 @@ ul {
 }
 .une_image {
   height: 445px;
-  border-radius: 22px 22px 22px 22px;
   box-shadow: 13px 2px 28px #d9d9d9;
+  border-radius: 22px 22px 22px 22px;
 }
 #activites a {
   text-decoration: none;
@@ -455,6 +461,7 @@ ul {
 }
 #activites a:hover {
   box-shadow: 13px 10px 28px #6e6e6e;
+  border-radius: 22px 22px 22px 22px;
 }
 #deux_images1 {
   display: flex;
@@ -551,15 +558,14 @@ footer {
     height: auto;
     display: block;
     margin-top: 25px;
-    margin-left: 18px;
   }
   #ligne_logo_nav {
     margin-top: 0px;
-    display: block;
+    justify-content: flex-start;
   }
   header img {
     margin-top: 0px;
-    margin-right: 5px;
+    margin-left: 20px;
   }
   nav {
     width: auto;
@@ -572,21 +578,103 @@ footer {
     padding-top: 0px;
   }
   nav ul {
-    flex-wrap: wrap;
     justify-content: center;
+    position: absolute;
   }
-  #hebergements_option:nth-child(1) {
-    order: 2;
+  #hebergements_option {
+    position: relative;
+    top: 55px;
+    right: 106px;
   }
-  #activites_option:nth-child(2) {
-    order: 3;
+  #activites_option {
+    position: relative;
+    top: 55px;
+    right: 46px;
   }
-  #sinscrire_option:nth-child(3) {
-    order: 1;
+  #sinscrire_option {
+    position: relative;
+    top: 0px;
+    right: 111px;
+}
+  header h1 {
+    margin-top: 85px;
+  }
+  #recherche_form {
+  width: 50%;
+  height: 50%;
+  }
+.loupe {
+  display: block;
+}
+.boutton {
+  display: none;
+}
+.loupe {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  text-decoration: none;
+  background-color: #0065fc;
+  border-radius: 16px 16px 16px 16px;
+  border-left: none;
+  height: 52px;
+  width: 52px;
+  cursor: pointer;
+  border: none;
+}
+  #filtres {
+  flex-direction: column;
+  margin-left: 22px;
   }
   #nav_filtres {
     height: auto;
   }
+  #titre_filtres {
+    margin-left: 3px;
+  }
+  #filtres ul {
+    width: 375px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: unset;
+    padding-left: 0px;
+  }
+  .champs_filtres {
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-right: 0px;
+  }
+  .texte_filtre {
+    font-size: 1em;
+    padding: 14px 18px 13px 34px;
+  }
+  #texte_romant {
+    padding: 14px 13px 13px 30px;
+  }
+  .fa-money-bill-wave,
+  .fa-child,
+  .fa-heart,
+  .fa-dog {
+    font-size: 1.2em;
+  }
+  #icone_child {
+    padding: 15px 17px 15px 17px;
+  }
+  #icone_heart {
+    padding: 16px 15px 15px 15px;
+  }
+  #icone_dog {
+    padding: 16px 14px 15px 14px;
+  }
+  #familial {
+    margin-left: 10px;
+  }
+  #romantique, #animaux {
+    margin-top: 10px;
+  }
+
   #section_hotels {
     height: auto;
     width: 375px;
@@ -606,13 +694,16 @@ footer {
     display: block;
     width: 335px;
     height: 199px;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
+  }
+  #hebergements_marseille a:hover { 
+    box-shadow: none;
   }
   #hebergements_marseille a:active {
     box-shadow: 13px 10px 28px #000000;
   }
   #hebergements_marseille h2 {
-    margin-left: 40px;
+    margin-left: 19px;
     margin-top: 41px;
     margin-bottom: 22px;
   }
@@ -643,20 +734,31 @@ footer {
   #hotel_amina {
     display: block;
     border-radius: 17px 17px 0px 0px;
-    padding-top: 5px;
   }
   #lien_bas {
     background: none;
+    margin-top: 20px;
+    margin-left: 14px;
   }
   #hebergements_populaires {
     border-radius: unset;
     width: 375px;
   }
+  #titre_populaires {
+    margin-left: 20px;
+    margin-right: 22px;
+  }
+  #titre_populaires ul {
+    margin-bottom: 25px;
+    margin-top: 17px;
+  }
   #hebergements_populaires a {
-    display: block;
     width: 335px;
     height: 144px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+  }
+  #hebergements_populaires a:hover { 
+    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
   }
   #hebergements_populaires a:active {
     box-shadow: 13px 10px 28px #000000;
@@ -668,41 +770,38 @@ footer {
   #populaires_cartes {
     width: 375px;
     height: auto;
+    margin-bottom: 25px;
   }
   .cartes_populaires {
     width: 335px;
     height: 144px;
-    margin-bottom: 10px;
   }
   .contenu_populaire {
     width: auto;
-  }
-  .img_populaires {
-    padding-top: 5px;
   }
 
   #section_activites {
     height: auto;
     width: 375px;
+    margin-top: 52px;
   }
   #section_activites h2 {
     margin-top: 0px;
     margin-bottom: 0px;
+    margin-left: 20px;
   }
   #activites {
     flex-direction: column;
     align-items: center;
     width: 375px;
     height: auto;
+    margin-top: 28px;
   }
   #activites a {
     display: block;
     width: 335px;
     height: 190px;
-    margin-bottom: 10px;
-  }
-  #activites a:active {
-    box-shadow: 13px 10px 28px #6e6e6e;
+    margin-bottom: 12px;
   }
   .une_image {
     width: 335px;
@@ -723,7 +822,6 @@ footer {
   .img_activites_mob {
     display: block;
     border-radius: 17px 17px 0px 0px;
-    margin-right: 0px;
   }
   footer {
     height: auto;
@@ -735,9 +833,19 @@ footer {
     width: 375px;
     height: auto;
     min-width: 0px;
+    margin-top: 38px;
   }
-
+  #colone_apropos {
+    margin-top: 20px;
+  }
+  #colone_assistance {
+    margin-top: 10px;
+    margin-bottom: 31px;
+  }
   #footer_content ul {
+    padding-left: 68px;
+    margin-bottom: 0px;
+    margin-top: 26px;
   }
 }
 
