@@ -1054,8 +1054,53 @@ footer {
     font-size: 0.9em;
   }
 }
-
-@media all and (min-width: 637px) and (max-width: 991px) {
+@media all and (min-width: 637px) and (max-width: 938px) {
+  #activites {
+    display: flex;
+    justify-content: space-between;
+    max-width: 938px;
+  }
+  .img_activites {
+    border-radius: 17px 17px 0px 0px;
+  }
+  .img_activites_mob,
+  .img_activites_tab {
+    display: none;
+  }
+  #deux_images1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #fort_pomegues {
+    max-height: 235px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+  }
+  #iles_frioul {
+    max-height: 163px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+  }
+  #deux_images2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #nd_garde {
+    max-height: 195px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+    color: #000000;
+  }
+  #parc_longchamp {
+    max-height: 209px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+    color: #000000;
+  }
+}
+@media all and (min-width: 637px) and (max-width: 1129px) {
   body {
     display: flex;
     width: 100%;
@@ -1168,7 +1213,8 @@ footer {
   }
   #filtres {
     margin-left: 4%;
-    margin-bottom: 0px;
+    margin-bottom: 8px;
+    margin-top: 8px;
   }
   #nav_filtres {
     height: auto;
@@ -1194,7 +1240,6 @@ footer {
   #info {
     margin-left: 1%;
   }
-
   #section_hotels {
     height: auto;
     width: 100%;
@@ -1337,7 +1382,7 @@ footer {
   #section_activites {
     height: auto;
     width: 100%;
-    margin-top: 14%;
+    margin-top: 2%;
   }
   #section_activites h2 {
     margin: 0% 0% 0% 6%;
@@ -1348,7 +1393,7 @@ footer {
   }
   #activites {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
@@ -1364,6 +1409,7 @@ footer {
     max-width: 310px;
     max-height: 190px;
     margin-bottom: 6%;
+    margin-right: 3%;
   }
   #activites a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -1375,7 +1421,6 @@ footer {
   #deux_images1,
   #deux_images2 {
     flex-direction: row;
-    flex-wrap: wrap;
     height: auto;
     align-items: center;
     margin-bottom: 10px;
@@ -1416,5 +1461,26 @@ footer {
   #footer_content ul {
     padding-left: 15%;
     margin: 6% 0% 0% 0%;
+  }
+}
+@media all and (min-width: 922px) and (max-width: 1129px) {
+  #hebergements_populaires a {
+    margin-right: 2%;
+  }
+}
+@media all and (min-width: 1130px) and (max-width: 1360px) {
+  #bloc_page {
+    margin-left: 15px;
+  }
+  p,
+  li {
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  header img {
+    margin-top: 0px;
   }
 }
