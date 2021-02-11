@@ -1,14 +1,18 @@
 body {
+  max-width: 1440px;
   font-family: "Raleway", sans-serif;
   color: black;
+  margin: auto;
 }
 #bloc_page,
 footer {
-  width: 1340px;
-  min-width: auto;
+  max-width: 1340px;
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+footer {
+  max-width: 1440px;
 }
 h1 {
   font-size: 1.35em;
@@ -317,7 +321,8 @@ header p {
 #hotel_mouettes,
 #hotel-mer,
 #auberge_panier,
-#hotel_amina {
+#hotel_amina,
+.marseille_tab {
   display: none;
 }
 .texte_marseille {
@@ -439,7 +444,8 @@ ul {
 .img_activites {
   border-radius: 17px 17px 0px 0px;
 }
-.img_activites_mob {
+.img_activites_mob,
+.img_activites_tab {
   display: none;
 }
 #section_activites h3 {
@@ -530,40 +536,46 @@ footer {
   color: #0065fc;
   text-decoration: underline;
 }
-@media all and (min-width: 0px) and (max-width: 480px) {
+@media all and (max-width: 636px) {
+  /* Version mobile */
   body {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: center; /* Pour centrer la page entière */
+    justify-content: center; /* Pour centrer la page entière */
     margin: 0px;
   }
-  #bloc_page,
-  footer {
-    width: 375px; /* Pour définir la taille correspondante à la maquette */
-    min-width: auto; /* Pour faire la page s'adapter aux écrans qui sont encore plus petits */
-    margin: 0px;
+  #bloc_page {
+    width: 100%; /* Pour définir la taille correspondante à la maquette */
   }
   header,
   footer,
   #nav_filtres {
-    width: 375px;
-    min-width: auto;
+    width: 100%;
+  }
+  p,
+  li {
+    font-size: 1.03em;
+  }
+  h2 {
+    font-size: 1.3em;
   }
   header {
     height: auto; /* Pour laisser header s'adapter automatiquement au largeur d'écran et aux ses éléments */
     margin-top: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 2%;
   }
   #ligne_logo_nav {
     margin-top: 0px;
     justify-content: flex-start;
+    width: 100%;
   }
   header img {
     margin-top: 0px;
-    margin-left: 18px;
+    margin-left: 6%;
   }
   nav {
-    width: auto;
+    width: 100%;
     margin-top: 10px;
   }
   nav li {
@@ -577,24 +589,24 @@ footer {
   }
   #hebergements_option {
     position: relative; /* Position relative pour définir la position par rapport nav ul; pareil pour #activites_option et #sinscrire_option */
-    top: 55px;
-    right: 114px;
-    padding: 0px 38px 14px 38px; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
+    top: 318%;
+    right: 107%;
+    padding: 0% 33% 9% 34%; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
     margin-right: 0px;
   }
   #activites_option {
     position: relative;
-    top: 55px;
-    right: 114px;
-    padding: 0px 62px 14px 60px;
+    top: 318%;
+    right: 71%;
+    padding: 0% 91% 16% 90%;
     margin-left: 0px;
   }
   #sinscrire_option {
     position: relative;
-    top: 0px;
-    right: 224px;
+    top: 0%;
+    right: 38%;
     border-bottom: 3px solid #ffffff;
-    padding-right: 20px;
+    padding: 0% 20% 0% 20%;
   }
   #sinscrire_option:hover {
     border-bottom: 3px solid #0065fc;
@@ -608,29 +620,31 @@ footer {
     border-bottom: 3px solid #0065fc;
   }
   header h1 {
+    width: 81%;
     margin-top: 96px;
-    margin-left: 19px;
+    margin-left: 6%;
     padding-right: 11px;
   }
   header p {
-    margin-left: 19px;
+    margin-left: 6%;
     margin-top: 12px;
+    font-size: 0.99em;
   }
   #recherche_form {
     max-width: 332px;
     width: 100%;
-    margin-left: 19px;
+    margin-left: 6%;
     position: absolute;
   }
   #icone_recherche {
-    width: 37px;
+    max-width: 37px;
   }
   .champ_recherche {
     max-width: 230px;
   }
   #texte_recherche {
     max-width: 241px;
-    padding-right: 20px;
+    padding-right: 5%;
     z-index: 1;
   }
   .loupe {
@@ -663,19 +677,20 @@ footer {
   }
   #filtres {
     flex-direction: column; /* Pour afficher le titre et les filtres un sous l'autre */
-    margin-left: 20px;
+    margin-left: 6%;
     margin-top: 53px;
+    margin-bottom: 6%;
   }
   #nav_filtres {
     height: auto;
   }
   #filtres ul {
-    width: 375px;
+    width: 100%;
     flex-wrap: wrap; /* Pour ranger les filtres d'ans l'ordre demandé dans la maquette */
     justify-content: flex-start;
     position: unset; /* Pour enlèver la position 'absolute' de nav ul */
     padding-left: 0px;
-    margin-top: 14px;
+    margin-top: 5%;
   }
   #titre_filtres {
     margin-top: 17px;
@@ -684,15 +699,17 @@ footer {
   .champs_filtres {
     justify-content: flex-start;
     align-items: stretch;
-    margin-right: 0px;
+    margin-right: 3%;
+    margin-bottom: 4%;
   }
   .texte_filtre {
     /* La taille de filtres est plus petite dans la version media, les commandes suivantes modifient leur taille */
     font-size: 1em;
-    padding: 14px 18px 13px 34px;
+    padding: 14px 16px 13px 34px;
+    flex-wrap: nowrap;
   }
   #texte_romant {
-    padding: 14px 13px 13px 30px;
+    padding: 14px 10px 13px 30px;
   }
   .fa-money-bill-wave,
   .fa-child,
@@ -709,28 +726,26 @@ footer {
   #icone_dog {
     padding: 16px 14px 15px 14px;
   }
-  #familial {
-    margin-left: 10px;
-  }
-  #romantique,
-  #animaux {
-    margin-top: 10px;
+  #info {
+    margin-left: 1%;
   }
   #info ul {
     margin-left: 15px;
+    margin-top: -2%;
     position: unset;
   }
   #info_texte {
     flex-wrap: wrap;
+    font-size: 0.96em;
   }
   .fa-info {
     margin-bottom: 20px;
   }
   #section_hotels {
     height: auto;
-    width: 375px;
+    width: 100%;
     flex-direction: column; /* Dans la version media les deux blocks des hébergements sont placés un sous l'autre */
-    margin-top: 30px;
+    margin-top: 9%;
   }
   #hebergements_marseille {
     background-color: #ffffff;
@@ -744,9 +759,11 @@ footer {
     order: 1;
   }
   #hebergements_marseille a {
-    width: 335px;
-    height: 199px;
-    margin-bottom: 17px;
+    width: 90%;
+    max-width: 375px;
+    height: 100%;
+    max-height: 199px;
+    margin-bottom: 4%;
   }
   #hebergements_marseille a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -757,26 +774,27 @@ footer {
     border-radius: 22px 22px 22px 22px;
   }
   #hebergements_marseille h2 {
-    margin: 41px 0px 22px 19px;
+    margin: 10% 0px 5% 5%;
   }
   #hebergements_cartes {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: auto;
     margin: 0px;
   }
   .cartes_marseille {
     display: flex;
-    width: 335px;
-    height: 199px;
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 375px;
+    height: fit-content;
   }
   .contenu_catre {
     width: auto;
   }
-  .img_marseille {
+  .img_marseille,
+  .marseille_tab {
     /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
     display: none;
   }
@@ -788,17 +806,25 @@ footer {
   #hotel_amina {
     display: block;
     border-radius: 17px 17px 0px 0px;
+    width: 100%;
   }
   .texte_marseille {
-    margin-top: 10px;
+    margin-top: 3%;
+    margin-left: 4%;
   }
   .texte_marseille h4 {
-    margin-top: 6px;
+    margin-top: 1%;
+    font-size: 0.9em;
+  }
+  .etoiles {
+    margin-top: 2%;
+    font-size: 0.8em;
+    margin-bottom: 2%;
   }
   #lien_bas {
     background: none;
-    margin-top: 14px;
-    margin-left: 14px;
+    margin-top: 4%;
+    margin-left: 4%;
   }
   #lien_bas:hover {
     color: #000000;
@@ -810,19 +836,21 @@ footer {
   }
   #hebergements_populaires {
     border-radius: unset;
-    width: 375px;
+    width: 100%;
   }
   #titre_populaires {
-    margin-left: 20px;
-    margin-right: 22px;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 6%;
   }
   #titre_populaires ul {
-    margin: 17px 0px 25px 0px;
+    margin: 5% 0px 7% 0px;
   }
   #hebergements_populaires a {
-    width: 335px;
-    height: 144px;
-    margin-bottom: 12px;
+    width: 90%;
+    max-width: 375px;
+    height: auto;
+    margin-bottom: 2%;
   }
   #hebergements_populaires a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -836,40 +864,50 @@ footer {
     margin: 0px;
   }
   #populaires_cartes {
-    width: 375px;
+    width: 100%;
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 8%;
   }
   .cartes_populaires {
-    width: 335px;
-    height: 144px;
+    width: 100%;
+    height: auto;
   }
   .contenu_populaire {
     width: auto;
   }
+  .texte_populaires h4 {
+    margin-bottom: 28%;
+    font-size: 0.9em;
+  }
   #section_activites {
     height: auto;
-    width: 375px;
-    margin-top: 52px;
+    width: 100%;
+    margin-top: 14%;
   }
   #section_activites h2 {
-    margin: 0px 0px 0px 20px;
+    margin: 0% 0% 0% 6%;
+    font-size: 1.35em;
   }
   #section_activites h3 {
-    margin-top: 20px;
+    margin-left: 5%;
   }
   #activites {
     flex-direction: column; /*Les photos sont placés en colonne dans la version mobile */
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: auto;
-    margin-top: 28px;
+    margin-top: 7%;
+    margin-bottom: -7%;
+  }
+  #iles_frioul {
+    height: 190px; /* Ajustement de taille de cette carte pour pouvir appliquer les mêmes règles de pourcentage pour media */
   }
   #activites a {
     display: block;
-    width: 335px;
-    height: 190px;
-    margin-bottom: 12px;
+    width: 90%;
+    max-width: 375px;
+    max-height: 199px;
+    margin-bottom: 6%;
   }
   #activites a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -878,25 +916,34 @@ footer {
     box-shadow: 13px 10px 28px #6e6e6e;
     border-radius: 22px 22px 22px 22px;
   }
-  .une_image {
-    width: 335px;
-    height: 190px;
+  #deux_images1,
+  #deux_images2 {
+    width: 100%;
+    height: auto;
     margin-bottom: 10px;
+    align-items: center;
   }
   #fort_pomegues,
   #iles_frioul,
   #nd_garde,
-  #parc_longchamp {
-    width: 335px;
-    height: 190px;
-    margin-bottom: 10px;
+  #parc_longchamp,
+  .une_image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 375px;
+    max-height: 199px;
+    height: 100%;
+    padding-bottom: 2%;
   }
-  .img_activites {
+  .img_activites,
+  .img_activites_tab {
     display: none; /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
   }
   .img_activites_mob {
     display: block;
     border-radius: 17px 17px 0px 0px;
+    width: 100%;
   }
   footer {
     height: auto;
@@ -904,22 +951,536 @@ footer {
   #footer_content {
     flex-direction: column; /* Le footer est aligné en colonne en version mobile */
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: auto;
-    min-width: 0px;
-    margin-top: 38px;
+    margin-top: 11%;
   }
   #colone_apropos {
-    margin-top: 20px;
+    margin-top: 5%;
   }
   #colone_assistance {
     margin: 10px 0px 31px 0px;
   }
   #footer_content ul {
-    padding-left: 68px;
-    margin: 26px 0px 0px 0px;
+    padding-left: 15%;
+    margin: 6% 0% 0% 0%;
+  }
+}
+@media all and (min-width: 530px) and (max-width: 636px) {
+  /* Ajustements à la grande mobile */
+  header {
+    margin-bottom: 0%;
+  }
+  header h1 {
+    font-size: 1.3em;
+  }
+  header p {
+    font-size: 0.9em;
+  }
+  #info_texte {
+    font-size: 0.9em;
+  }
+  #filtres {
+    margin-left: 4%;
+    margin-top: 43px;
+    margin-bottom: 2%;
+  }
+  .fa-info {
+    margin-bottom: 5px;
+  }
+  #section_hotels {
+    margin: 2%;
+  }
+  #hebergements_populaires {
+    border-radius: 22px 22px 22px 22px;
+  }
+  #titre_populaires {
+    margin: 0% 10px 0% 10%;
+  }
+  #hebergements_populaires h2 {
+    font-size: 1.28em;
+  }
+  #hebergements_populaires a {
+    width: 90%;
+    max-width: 375px;
+    height: auto;
+    margin-bottom: 2%;
+  }
+  .texte_populaires {
+    margin-left: 28px;
+  }
+  #hebergements_marseille h2 {
+    margin: 7% 10px 5% 10%;
+    font-size: 1.28em;
+  }
+  #section_activites {
+    margin: 2%;
+  }
+  #section_activites h2 {
+    margin-top: 2%;
+    font-size: 1.28em;
   }
 }
 
-@media all and (min-width: 481px) and (max-width: 1023px) {
+@media all and (min-width: 637px) and (max-width: 880px) {
+  #hebergements_populaires a {
+    width: 90%;
+    max-width: 410px;
+    height: auto;
+    margin-bottom: 2%;
+  }
+  #hebergements_populaires a:hover {
+    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
+  }
+  #hebergements_populaires a:active {
+    /* Les liens ont un effet au click */
+    box-shadow: 13px 10px 28px #000000;
+    border-radius: 22px 22px 22px 22px;
+  }
+  #populaires_cartes {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8%;
+  }
+  .cartes_populaires {
+    width: 100%;
+    height: auto;
+  }
+  .contenu_populaire {
+    width: auto;
+  }
+  .texte_populaires h4 {
+    margin-bottom: 28%;
+    font-size: 0.9em;
+  }
+}
+@media all and (min-width: 637px) and (max-width: 938px) {
+  #activites {
+    display: flex;
+    justify-content: space-between;
+    max-width: 938px;
+  }
+  .img_activites {
+    border-radius: 17px 17px 0px 0px;
+  }
+  .img_activites_mob,
+  .img_activites_tab {
+    display: none;
+  }
+  #deux_images1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #fort_pomegues {
+    max-height: 235px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+  }
+  #iles_frioul {
+    max-height: 163px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+  }
+  #deux_images2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #nd_garde {
+    max-height: 195px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+    color: #000000;
+  }
+  #parc_longchamp {
+    max-height: 209px;
+    border-radius: 22px 22px 22px 22px;
+    box-shadow: 13px 2px 28px #d9d9d9;
+    color: #000000;
+  }
+}
+@media all and (min-width: 637px) and (max-width: 1129px) {
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center; /* Pour centrer la page entière */
+    margin: 0px;
+  }
+  #bloc_page {
+    width: 100%; /* Pour définir la taille correspondante à la maquette */
+  }
+  header,
+  footer,
+  #nav_filtres {
+    width: 100%;
+  }
+  p,
+  li {
+    font-size: 0.9em;
+  }
+  header h1 {
+    margin-top: 28px;
+    margin-left: 20px;
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  header p {
+    font-size: 0.9em;
+  }
+  #info_texte {
+    font-size: 0.9em;
+  }
+  header {
+    height: auto; /* Pour laisser header s'adapter automatiquement au largeur d'écran et aux ses éléments */
+    margin-top: 25px;
+    margin-bottom: 0px;
+  }
+  #ligne_logo_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  header img {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  nav {
+    width: auto;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  nav ul {
+    position: unset;
+  }
+  nav li {
+    margin-right: 0%;
+  }
+  .top_nav {
+    padding-top: 0px;
+  }
+  #hebergements_option {
+    position: unset;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #activites_option {
+    position: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #sinscrire_option {
+    position: unset;
+    padding-left: 25px;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+    border-bottom: none;
+    border-top: none;
+  }
+  nav a:hover {
+    border-bottom: none;
+    border-top: none;
+  }
+  nav a:active {
+    color: #0065fc;
+    text-decoration: underline;
+    border-bottom: none;
+    border-top: none;
+  }
+  #sinscrire_option:hover {
+    border-bottom: none;
+    border-top: none;
+  }
+  header h1 {
+    width: 81%;
+    margin-top: 3%;
+    margin-left: 4%;
+    font-size: 1.3em;
+  }
+  header p {
+    margin-left: 4%;
+    margin-top: 12px;
+    font-size: 0.99em;
+  }
+  #recherche_form {
+    width: 100%;
+    margin-left: 4%;
+  }
+  #filtres {
+    margin-left: 4%;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+  #nav_filtres {
+    height: auto;
+  }
+  #filtres ul {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 0px;
+    margin-top: 5%;
+  }
+  #titre_filtres {
+    margin-bottom: 0px;
+    padding-top: 3%;
+    margin-right: 1%;
+  }
+  .champs_filtres {
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-right: 2%;
+    margin-bottom: 1%;
+  }
+  #info {
+    margin-left: 1%;
+  }
+  #section_hotels {
+    height: auto;
+    width: 100%;
+    flex-direction: column; /* Dans la version media les deux blocks des hébergements sont placés un sous l'autre */
+    margin-top: 2%;
+    margin: 2% 2px 0px 2px;
+  }
+  #hebergements_marseille {
+    background-color: #ffffff;
+    margin-right: 0px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f2f2f2;
+    border-radius: 0px 0px 0px 0px;
+  }
+  #hebergements_marseille:nth-child(1) {
+    /* Dans les versions tablette et mobile les deux blocks d'hébergements changent l'ordre */
+    order: 2;
+  }
+  #hebergements_populaires:nth-child(2) {
+    order: 1;
+  }
+  #hebergements_marseille a {
+    width: 100%;
+    max-width: 310px;
+    height: 100%;
+    max-height: 199px;
+    margin-bottom: 4%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+  }
+  #hebergements_marseille a:hover {
+    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
+  }
+  #hebergements_marseille a:active {
+    /* Les liens ont un effet au click */
+    box-shadow: 13px 10px 28px #000000;
+    border-radius: 22px 22px 22px 22px;
+  }
+  #hebergements_marseille h2 {
+    margin: 3% 4% 2% 4%;
+  }
+  #hebergements_cartes {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+  .cartes_marseille {
+    display: flex;
+    width: 100%;
+    max-width: 310px;
+    height: 100%;
+  }
+  .contenu_catre {
+    width: auto;
+  }
+  .img_marseille,
+  #cannebiere,
+  #hotel_port,
+  #hotel_mouettes,
+  #hotel-mer,
+  #auberge_panier,
+  #hotel_amina {
+    /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
+    display: none;
+  }
+  .marseille_tab {
+    display: block;
+    border-radius: 17px 17px 0px 0px;
+  }
+  .texte_marseille {
+    margin-top: 3%;
+    margin-left: 4%;
+  }
+  .texte_marseille h4 {
+    margin-top: 1%;
+  }
+  #lien_bas {
+    background: none;
+    margin-top: 4%;
+    margin-left: 4%;
+  }
+  #lien_bas:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+  #lien_bas:active {
+    color: #0065fc;
+    text-decoration: none;
+  }
+  #hebergements_populaires {
+    width: 100%;
+  }
+  #titre_populaires {
+    margin: 2% 4% 2% 4%;
+  }
+  #titre_populaires ul {
+    margin: 0px;
+  }
+  #hebergements_populaires a {
+    width: 100%;
+    max-width: 284px;
+    height: auto;
+    margin-bottom: 2%;
+    margin-right: 1%;
+  }
+  #hebergements_populaires a:hover {
+    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
+  }
+  #hebergements_populaires a:active {
+    /* Les liens ont un effet au click */
+    box-shadow: 13px 10px 28px #000000;
+    border-radius: 22px 22px 22px 22px;
+  }
+  #hebergements_populaires h2 {
+    margin: 0px;
+  }
+  #populaires_cartes {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+  }
+  .cartes_populaires {
+    width: 100%;
+    height: auto;
+  }
+  .contenu_populaire {
+    width: auto;
+  }
+  .texte_populaires {
+    margin-left: 2%;
+  }
+  .texte_populaires h4 {
+    margin-bottom: 28%;
+  }
+  #section_activites {
+    height: auto;
+    width: 100%;
+    margin-top: 2%;
+  }
+  #section_activites h2 {
+    margin: 0% 0% 0% 6%;
+  }
+  #section_activites h3 {
+    margin-left: 5%;
+    margin-top: 20px;
+  }
+  #activites {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  #iles_frioul {
+    height: 190px; /* Ajustement de taille de cette carte pour pouvir appliquer les mêmes règles de pourcentage pour media */
+  }
+  #activites a {
+    display: block;
+    width: 100%;
+    max-width: 310px;
+    max-height: 190px;
+    margin-bottom: 6%;
+    margin-right: 3%;
+  }
+  #activites a:hover {
+    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
+  }
+  #activites a:active {
+    box-shadow: 13px 10px 28px #6e6e6e;
+    border-radius: 22px 22px 22px 22px;
+  }
+  #deux_images1,
+  #deux_images2 {
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #fort_pomegues,
+  #iles_frioul,
+  #nd_garde,
+  #parc_longchamp,
+  .une_image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 310px;
+    max-height: 190px;
+    height: 100%;
+    padding-bottom: 2%;
+  }
+  .img_activites,
+  .img_activites_mob {
+    display: none; /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
+  }
+  .img_activites_tab {
+    display: block;
+    border-radius: 17px 17px 0px 0px;
+    width: 100%;
+  }
+  footer {
+    height: auto;
+  }
+  #footer_content {
+    width: 100%;
+    height: auto;
+    margin-top: 11%;
+  }
+  #colone_assistance {
+    margin: 10px 0px 31px 0px;
+  }
+  #footer_content ul {
+    padding-left: 15%;
+    margin: 6% 0% 0% 0%;
+  }
+}
+@media all and (min-width: 922px) and (max-width: 1129px) {
+  #hebergements_populaires a {
+    margin-right: 2%;
+  }
+}
+@media all and (min-width: 1130px) and (max-width: 1360px) {
+  #bloc_page {
+    margin-left: 15px;
+  }
+  p,
+  li {
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  header img {
+    margin-top: 0px;
+  }
 }
