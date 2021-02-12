@@ -553,14 +553,18 @@ footer {
   }
   #ligne_logo_nav {
     margin-top: 0px;
+    flex-wrap: wrap;
   }
   header img {
     margin-top: 0px;
-    margin-left: 20px;
+    padding-left: 18px;
   }
   nav {
     width: 100%;
+    min-width: 250px;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
   }
   nav li {
     margin-right: 0px;
@@ -572,23 +576,19 @@ footer {
     position: absolute; /* Pour pouvoir positionner les éléments li */
   }
   #hebergements_option {
-    position: relative; /* Position relative pour définir la position par rapport nav ul; pareil pour #activites_option et #sinscrire_option */
-    top: 318%;
-    right: 107%;
+    position: unset; /* Position relative pour définir la position par rapport nav ul; pareil pour #activites_option et #sinscrire_option */
     padding: 0% 33% 9% 34%; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
     margin-right: 0px;
   }
   #activites_option {
-    position: relative;
-    top: 318%;
-    right: 71%;
-    padding: 0% 91% 16% 90%;
+    position: unset;
+    padding: 0% 60% 16% 90%;
     margin-left: 0px;
   }
   #sinscrire_option {
     position: relative;
-    top: 0%;
-    right: 38%;
+    bottom: 239%;
+    float: right;
     border-bottom: 3px solid #ffffff;
     padding: 0% 20% 0% 20%;
   }
@@ -606,28 +606,28 @@ footer {
   header h1 {
     width: 81%;
     margin-top: 96px;
-    margin-left: 6%;
-    padding-right: 11px;
+    padding-left: 18px;
+    font-size: 1.25em;
   }
   header p {
-    margin-left: 6%;
     margin-top: 12px;
-    font-size: 0.99em;
+    font-size: 0.93em;
+    width: 90%;
+    padding-left: 18px;
   }
   #recherche_form {
     max-width: 332px;
-    width: 100%;
-    margin-left: 6%;
-    position: absolute;
+    width: 90%;
+    position: unset;
   }
   .champ_recherche {
     max-width: 230px;
-    min-width: 100px;
+    min-width: 90px;
   }
   #texte_recherche {
     max-width: 241px;
     padding-right: 5%;
-    min-width: 100px;
+    min-width: 90px;
   }
   .loupe {
     display: block;
@@ -658,9 +658,10 @@ footer {
   }
   #filtres {
     flex-direction: column; /* Pour afficher le titre et les filtres un sous l'autre */
-    margin-left: 6%;
     margin-top: 53px;
     margin-bottom: 6%;
+    padding-left: 18px;
+    margin-left: 0px;
   }
   #nav_filtres {
     height: auto;
@@ -720,12 +721,14 @@ footer {
   #section_hotels {
     height: auto;
     width: 100%;
+    min-width: 250px;
     flex-direction: column; /* Dans la version media les deux blocks des hébergements sont placés un sous l'autre */
     margin-top: 9%;
   }
   #hebergements_marseille {
     background-color: #ffffff;
     margin-right: 0px;
+    min-width: 250px;
   }
   #hebergements_marseille:nth-child(1) {
     /* Dans la version media les deux blocks des hébergements changent l'ordre */
@@ -739,7 +742,7 @@ footer {
     max-width: 375px;
     height: 100%;
     margin-bottom: 3%;
-    min-width: 320px;
+    min-width: 250px;
   }
   #hebergements_marseille a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -761,6 +764,7 @@ footer {
   .cartes_marseille {
     display: flex;
     width: 100%;
+    min-width: 250px;
   }
   .img_marseille,
   .marseille_tab {
@@ -806,7 +810,7 @@ footer {
   #hebergements_populaires {
     border-radius: unset;
     width: 100%;
-    min-width: 320px;
+    min-width: 250px;
   }
   #titre_populaires {
     margin-left: 6%;
@@ -820,7 +824,7 @@ footer {
     width: 90%;
     height: auto;
     margin-bottom: 10px;
-    min-width: 320px; /* Le texte ne sort pas de son block en petite taille d'écran */
+    min-width: 250px; /* Le texte ne sort pas de son block en petite taille d'écran */
   }
   #populaires_cartes a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -840,6 +844,7 @@ footer {
   }
   .cartes_populaires {
     width: 100%;
+    min-width: 250px;
     height: auto;
   }
   .contenu_populaire {
@@ -863,6 +868,7 @@ footer {
     flex-direction: column; /*Les photos sont placés en colonne dans la version mobile */
     align-items: center;
     width: 100%;
+    min-width: 250px;
     height: auto;
     margin-top: 7%;
     margin-bottom: -7%;
@@ -876,7 +882,7 @@ footer {
     max-width: 375px;
     max-height: 199px;
     margin-bottom: 6%;
-    min-width: 320px;
+    min-width: 250px;
   }
   #activites a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -888,6 +894,7 @@ footer {
   #deux_images1,
   #deux_images2 {
     width: 100%;
+    min-width: 250px;
     height: auto;
     margin-bottom: 10px;
     align-items: center;
@@ -901,6 +908,7 @@ footer {
     flex-direction: column;
     width: 100%;
     max-width: 375px;
+    min-width: 250px;
     max-height: 199px;
     height: 100%;
     padding-bottom: 2%;
@@ -1278,4 +1286,5 @@ footer {
   }
   #hebergements_cartes {
     height: auto;
+  }
 }
