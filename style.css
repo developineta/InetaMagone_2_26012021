@@ -554,6 +554,7 @@ footer {
   #ligne_logo_nav {
     margin-top: 0px;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   header img {
     margin-top: 0px;
@@ -562,9 +563,8 @@ footer {
   nav {
     width: 100%;
     min-width: 250px;
-    margin-top: 10px;
+    margin-top: 25px;
     display: flex;
-    justify-content: center;
   }
   nav li {
     margin-right: 0px;
@@ -577,18 +577,18 @@ footer {
   }
   #hebergements_option {
     position: unset; /* Position relative pour définir la position par rapport nav ul; pareil pour #activites_option et #sinscrire_option */
-    padding: 0% 33% 9% 34%; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
+    padding: 0% 16% 9% 35%; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
     margin-right: 0px;
   }
   #activites_option {
     position: unset;
-    padding: 0% 60% 16% 90%;
-    margin-left: 0px;
+    padding: 0% 57% 8% 48%;
+    margin-left: 59px;
   }
   #sinscrire_option {
     position: relative;
-    bottom: 239%;
-    float: right;
+    bottom: 269%;
+    left: 19px;
     border-bottom: 3px solid #ffffff;
     padding: 0% 20% 0% 20%;
   }
@@ -619,6 +619,7 @@ footer {
     max-width: 332px;
     width: 90%;
     position: unset;
+    padding-left: 18px;
   }
   .champ_recherche {
     max-width: 230px;
