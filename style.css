@@ -166,6 +166,7 @@ header p {
 #filtres ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   padding-left: 31px;
   margin-top: 28px;
 }
@@ -235,6 +236,9 @@ header p {
 }
 #info li {
   margin-right: 0px;
+}
+#info_texte {
+  flex-wrap: wrap;
 }
 .fa-info {
   border: 1px #deebff solid;
@@ -616,16 +620,14 @@ footer {
     margin-left: 6%;
     position: absolute;
   }
-  #icone_recherche {
-    max-width: 37px;
-  }
   .champ_recherche {
     max-width: 230px;
+    min-width: 100px;
   }
   #texte_recherche {
     max-width: 241px;
     padding-right: 5%;
-    z-index: 1;
+    min-width: 100px;
   }
   .loupe {
     display: block;
@@ -636,7 +638,6 @@ footer {
   #boutton_submit {
     position: relative;
     right: 20px;
-    z-index: 2;
   }
   .loupe {
     color: white;
@@ -665,9 +666,6 @@ footer {
     height: auto;
   }
   #filtres ul {
-    width: 100%;
-    flex-wrap: wrap; /* Pour ranger les filtres d'ans l'ordre demandé dans la maquette */
-    justify-content: flex-start;
     position: unset; /* Pour enlèver la position 'absolute' de nav ul */
     padding-left: 0px;
     margin-top: 5%;
@@ -677,7 +675,6 @@ footer {
     margin-bottom: 0px;
   }
   .champs_filtres {
-    justify-content: flex-start;
     align-items: stretch;
     margin-right: 3%;
     margin-bottom: 4%;
@@ -715,7 +712,6 @@ footer {
     position: unset;
   }
   #info_texte {
-    flex-wrap: wrap;
     font-size: 0.96em;
   }
   .fa-info {
@@ -742,8 +738,8 @@ footer {
     width: 90%;
     max-width: 375px;
     height: 100%;
-    max-height: 199px;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
+    min-width: 320px;
   }
   #hebergements_marseille a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -758,20 +754,13 @@ footer {
   }
   #hebergements_cartes {
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: auto;
     margin: 0px;
   }
   .cartes_marseille {
     display: flex;
     width: 100%;
-    max-width: 375px;
-    height: fit-content;
-  }
-  .contenu_catre {
-    width: auto;
   }
   .img_marseille,
   .marseille_tab {
@@ -817,6 +806,7 @@ footer {
   #hebergements_populaires {
     border-radius: unset;
     width: 100%;
+    min-width: 320px;
   }
   #titre_populaires {
     margin-left: 6%;
@@ -828,9 +818,9 @@ footer {
   }
   #populaires_cartes a {
     width: 90%;
-    max-width: 375px;
     height: auto;
     margin-bottom: 10px;
+    min-width: 320px; /* Le texte ne sort pas de son block en petite taille d'écran */
   }
   #populaires_cartes a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -860,8 +850,6 @@ footer {
     font-size: 0.9em;
   }
   #section_activites {
-    height: auto;
-    width: 100%;
     margin-top: 14%;
   }
   #section_activites h2 {
@@ -888,6 +876,7 @@ footer {
     max-width: 375px;
     max-height: 199px;
     margin-bottom: 6%;
+    min-width: 320px;
   }
   #activites a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -1078,7 +1067,6 @@ footer {
     height: auto;
   }
   #filtres ul {
-    flex-wrap: wrap;
     padding-left: 0px;
     margin-top: 5%;
   }
