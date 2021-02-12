@@ -572,25 +572,21 @@ footer {
   .top_nav {
     padding-top: 0px;
   }
-  nav ul {
-    position: absolute; /* Pour pouvoir positionner les éléments li */
-  }
+
   #hebergements_option {
-    position: unset; /* Position relative pour définir la position par rapport nav ul; pareil pour #activites_option et #sinscrire_option */
     padding: 0% 16% 9% 35%; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
     margin-right: 0px;
   }
   #activites_option {
-    position: unset;
     padding: 0% 57% 8% 48%;
     margin-left: 59px;
   }
   #sinscrire_option {
-    position: relative;
-    bottom: 269%;
-    left: 19px;
+    position: absolute;
+    left: 276px;
+    top: 40px;
     border-bottom: 3px solid #ffffff;
-    padding: 0% 20% 0% 20%;
+    padding: 0px;
   }
   #sinscrire_option:hover {
     border-bottom: 3px solid #0065fc;
