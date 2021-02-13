@@ -540,6 +540,7 @@ footer {
   color: #0065fc;
   text-decoration: underline;
 }
+
 @media all and (max-width: 636px) {
   /* Version mobile */
   p,
@@ -713,6 +714,17 @@ footer {
   #icone_dog {
     padding: 16px 14px 15px 14px;
   }
+  #filtres span:hover {
+    /* Les filtres changent l'apparence au click et ne pas au survol */
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
+  }
+  #filtres span:active {
+    color: #0065fc;
+    background-color: #f2f2f2;
+    border: 1px solid #d9d9d9;
+  }
   #info {
     margin-left: 1%;
   }
@@ -861,6 +873,9 @@ footer {
   .contenu_populaire {
     width: auto;
   }
+  .texte_populaires {
+    height: 100%;
+  }
   .texte_populaires h4 {
     margin-bottom: 28%;
     font-size: 0.9em;
@@ -953,36 +968,38 @@ footer {
     padding-left: 15%;
     margin: 6% 0% 0% 0%;
   }
+  .colonnes_footer a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .colonnes_footer a:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+  .colonnes_footer a:active {
+    color: #0065fc;
+    text-decoration: underline;
+  }
 }
 
 @media all and (min-width: 637px) and (max-width: 1208px) {
-  body {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center; /* Pour centrer la page entière */
-    margin: 0px;
-  }
-  footer {
-    width: 100%;
-  }
+  /* Version tablette et écran PC de petite taille */
   p,
-  li {
+  li,
+  header p {
     font-size: 0.9em;
-  }
-  header h1 {
-    margin-top: 28px;
-    margin-left: 20px;
-    font-size: 1.2em;
   }
   h2 {
     font-size: 1.3em;
   }
-  header p {
-    font-size: 0.9em;
+  header h1 {
+    font-size: 1.3em;
+    width: 81%;
+    margin-top: 28px;
   }
-  #info_texte {
-    font-size: 1em;
+  header,
+  #nav_filtres {
+    padding-left: 18px;
   }
   header {
     height: auto; /* Pour laisser header s'adapter automatiquement au largeur d'écran et aux ses éléments */
@@ -990,20 +1007,13 @@ footer {
     margin-bottom: 0px;
   }
   #ligne_logo_nav {
-    display: flex;
-    justify-content: space-between;
     margin-top: 5px;
   }
-  header img {
-    margin-top: 0px;
-    margin-left: 20px;
-  }
   nav {
-    margin-right: 20px;
-    margin-top: 10px;
+    margin: 10px 20px 0px 0px;
   }
   nav li {
-    margin-right: 0%;
+    margin-right: 0px;
   }
   nav a:hover {
     color: #000000;
@@ -1014,24 +1024,7 @@ footer {
     text-decoration: underline;
     border-top: none;
   }
-  header h1 {
-    width: 81%;
-    margin-left: 4%;
-    margin-top: 45px;
-    font-size: 1.3em;
-  }
-  header p {
-    margin-left: 4%;
-    margin-top: 12px;
-    font-size: 0.99em;
-  }
-  #recherche_form {
-    margin-left: 4%;
-  }
   #filtres {
-    margin-left: 4%;
-    margin-bottom: 0px;
-    margin-top: 0px;
     flex-direction: column;
   }
   #nav_filtres {
@@ -1041,23 +1034,27 @@ footer {
     margin-top: 10px;
   }
   #titre_filtres {
-    margin-bottom: 0px;
-    margin-top: 16px;
-    margin-right: 1%;
+    margin: 16px 0px 0px 0px;
   }
   .champs_filtres {
-    justify-content: flex-start;
     align-items: stretch;
-    margin-right: 2%;
-    margin-bottom: 1%;
+    margin-bottom: 5px;
   }
-  #info {
-    margin-left: 1%;
+  #filtres span:hover {
+    /* Les filtres changent l'apparence au click et ne pas au survol */
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #d9d9d9;
+  }
+  #filtres span:active {
+    color: #0065fc;
+    background-color: #f2f2f2;
+    border: 1px solid #d9d9d9;
   }
   #section_hotels {
     height: auto;
     flex-direction: column; /* Dans la version media les deux blocks des hébergements sont placés un sous l'autre */
-    margin-top: 2%;
+    margin-top: 16px;
   }
   #hebergements_marseille {
     background-color: #ffffff;
@@ -1065,7 +1062,6 @@ footer {
     padding-bottom: 20px;
     border-bottom: 2px solid #f2f2f2;
     border-radius: 0px 0px 0px 0px;
-    height: auto;
   }
   #hebergements_marseille:nth-child(1) {
     /* Dans les versions tablette et mobile les deux blocks d'hébergements changent l'ordre */
@@ -1075,7 +1071,7 @@ footer {
     order: 1;
   }
   #hebergements_marseille a {
-    margin-bottom: 4%;
+    margin-bottom: 20px;
   }
   #hebergements_marseille a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
@@ -1087,18 +1083,12 @@ footer {
   }
   #hebergements_cartes {
     justify-content: space-around;
-    width: 100%;
     height: auto;
     margin: auto;
     max-width: 1208px;
   }
   .cartes_marseille {
-    display: flex;
     width: 100%;
-    max-width: 310px;
-  }
-  .contenu_catre {
-    width: auto;
   }
   .img_marseille,
   #cannebiere,
@@ -1114,16 +1104,8 @@ footer {
     display: block;
     border-radius: 17px 17px 0px 0px;
   }
-  .texte_marseille {
-    margin-top: 3%;
-    margin-left: 4%;
-  }
-  .texte_marseille h4 {
-    margin-top: 1%;
-  }
   #lien_bas {
     background: none;
-    margin-left: 40px;
   }
   #lien_bas:hover {
     color: #000000;
@@ -1133,20 +1115,14 @@ footer {
     color: #0065fc;
     text-decoration: none;
   }
-  #titre_populaires {
-    margin: 2% 4% 2% 4%;
-  }
-  #titre_populaires ul {
-    margin: 0px;
-  }
   #hebergements_populaires a {
     width: 100%;
     max-width: 284px;
-    margin-bottom: 2%;
-    margin-right: 1%;
+    margin-bottom: 25px;
   }
   #hebergements_populaires a:hover {
-    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
+    /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
+    box-shadow: none;
   }
   #hebergements_populaires a:active {
     /* Les liens ont un effet au click */
@@ -1160,23 +1136,15 @@ footer {
     width: 100%;
     max-width: 1208px;
     height: auto;
-    margin: auto;
   }
   .cartes_populaires {
     width: 100%;
-    height: auto;
-  }
-  .contenu_populaire {
-    width: auto;
   }
   .texte_populaires {
-    margin-left: 2%;
-  }
-  .texte_populaires h4 {
-    margin-bottom: 28%;
+    margin-left: 5px;
   }
   #section_activites {
-    margin-top: 2%;
+    margin-top: 12px;
   }
   #section_activites h2 {
     margin-left: 40px;
@@ -1184,7 +1152,7 @@ footer {
   #activites {
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 28px;
+    margin-top: 10px;
   }
   #activites a {
     width: 100%;
@@ -1226,7 +1194,11 @@ footer {
     margin-top: 6%;
   }
 }
+
 @media all and (min-width: 1209px) and (max-width: 1370px) {
-  header, #nav_filtres {
-  padding-left: 18px; 
+  /* Version PC en plus petite taille que dans la maquette */
+  header,
+  #nav_filtres {
+    padding-left: 18px;
+  }
 }
