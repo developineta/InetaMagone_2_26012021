@@ -33,10 +33,7 @@ li {
   font-size: 0.99em;
 }
 header {
-  display: flex; /* Application de Flexbox pour ranger mieux le header */
-  flex-direction: column; /* Définition de la direction de flex */
-  height: 196px; /* Définition de la taille de header */
-  margin-bottom: 18px; /* Espace entre header le block suivant */
+  margin-bottom: 22px; /* Espace entre header le block suivant */
 }
 #ligne_logo_nav {
   display: flex; /* Application de Flexbox pour ranger les éléments de la première ligne de header */
@@ -409,10 +406,7 @@ ul {
   margin-top: 0px;
 }
 #section_activites {
-  display: flex; /* Pour ranger les éléments dans la section correctement */
-  flex-direction: column;
-  height: auto; /* La hauteur s'adapte automatiquement */
-  margin-top: 38px;
+  margin-top: 60px;
 }
 #activites {
   display: flex; /* Les propiétés d'apparence des cartes dans son bloc */
@@ -480,10 +474,11 @@ ul {
   display: flex; /* Définition de flex pour ranger correctement les éléments de footer */
   background-color: #f2f2f2;
   margin-top: 58px;
+  padding-bottom: 36px;
 }
 .colonnes_footer h3 {
   margin-top: 0px;
-  margin-bottom: 6px;
+  margin-bottom: 21px;
   font-size: 1.1em;
 }
 .colonnes_footer {
@@ -492,8 +487,6 @@ ul {
 }
 #footer_content ul {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
   padding-left: 48px;
   margin-top: 45px;
 }
@@ -518,7 +511,6 @@ ul {
   header {
     height: auto; /* Pour laisser header s'adapter automatiquement à la hauteur nécessaire */
     margin-top: 25px;
-    margin-bottom: 0px;
   }
   #ligne_logo_nav {
     margin-top: 0px;
@@ -592,6 +584,7 @@ ul {
   #nav_filtres {
     flex-direction: column; /* Propriété flex pour le rangement correct de ce block */
     height: auto; /* La hauteur de <div> s'adapte autamatiquement */
+    margin-top: 36px;
   }
   #recherche_form {
     max-width: 349px; /* Rends la <div> recherche adaptable jusqu'à la taille minimale de l'écran et selon la maquette */
@@ -899,6 +892,7 @@ ul {
     align-items: center;
     width: 100%;
     margin-top: 40px;
+    padding-bottom: 0px;
   }
   #colone_apropos {
     margin-top: 5%;
