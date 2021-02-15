@@ -300,15 +300,7 @@ header p {
 }
 .img_marseille {
   border-radius: 17px 17px 0px 0px; /* Les bordures arrondies en haut des photos */
-}
-#cannebiere,
-#hotel_port,
-#hotel_mouettes,
-#hotel-mer,
-#auberge_panier,
-#hotel_amina,
-.marseille_tab {
-  display: none; /* Les photos de versions tablette et mobile ne sont pas visibles en version PC - difference de tailles */
+  width: 100%;
 }
 .texte_marseille {
   margin-left: 11px;
@@ -416,10 +408,6 @@ ul {
 }
 .img_activites {
   border-radius: 17px 17px 0px 0px;
-}
-.img_activites_mob,
-.img_activites_tab {
-  display: none; /* Les photos de versions mobile et tablette non visibles dans la version PC */
 }
 #section_activites h3 {
   margin-left: 18px;
@@ -733,19 +721,13 @@ ul {
     width: 100%;
     min-width: 250px;
   }
-  .img_marseille,
-  .marseille_tab {
-    display: none; /* Les autres tailles de photos sont utilisés dans la version media. Les photos de vercion PC et tablette sont remplacés */
-  }
   #cannebiere,
   #hotel_port,
   #hotel_mouettes,
   #hotel-mer,
   #auberge_panier,
   #hotel_amina {
-    display: block;
-    border-radius: 17px 17px 0px 0px;
-    width: 100%; /* L'adaptation de la taille de la photo à sa carte */
+    width: 100%;
   }
   .texte_marseille {
     margin-top: 3%;
@@ -878,12 +860,7 @@ ul {
     height: 100%;
     padding-bottom: 2%;
   }
-  .img_activites,
-  .img_activites_tab {
-    display: none; /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
-  }
-  .img_activites_mob {
-    display: block;
+  .img_activites {
     border-radius: 17px 17px 0px 0px;
     width: 100%;
   }
@@ -1023,15 +1000,6 @@ ul {
   .cartes_marseille {
     width: 100%;
   }
-  .img_marseille,
-  #cannebiere,
-  #hotel_port,
-  #hotel_mouettes,
-  #hotel-mer,
-  #auberge_panier,
-  #hotel_amina {
-    display: none; /* Les autres tailles de photos sont utilisés dans la version média. Les photos de vercion PC sont remplacés */
-  }
   .marseille_tab {
     display: block;
     border-radius: 17px 17px 0px 0px;
@@ -1111,12 +1079,7 @@ ul {
     height: 100%;
     padding-bottom: 2%;
   }
-  .img_activites,
-  .img_activites_mob {
-    display: none; /* Les autres tailles de photos sont utilisés dans la version média. Les photos de vercion PC sont remplacés */
-  }
-  .img_activites_tab {
-    display: block;
+  .img_activites {
     border-radius: 17px 17px 0px 0px;
     width: 100%;
   }
