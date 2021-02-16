@@ -1,23 +1,15 @@
 body {
-  max-width: 1440px;
-  font-family: "Raleway", sans-serif;
+  max-width: 1440px; /* Définition de la taille maximale de la page */
+  font-family: "Raleway", sans-serif; /* Définition de la police indiqué en HTML */
   color: black;
-  margin: auto;
+  margin: auto; /* La page doit être centré */
 }
 #bloc_page {
-  max-width: 1340px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-footer {
-  max-width: 1440px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+  max-width: 1340px; /* Définition de la taille maximale de la partie plus importante de la page */
+  margin: auto; /* Le bloc de page doit être centré */
 }
 h1 {
-  font-size: 1.35em;
+  font-size: 1.35em; /* Définition de la taille et apparence des polices utilisés dans la page */
   font-weight: bold;
 }
 h2 {
@@ -41,22 +33,19 @@ li {
   font-size: 0.99em;
 }
 header {
-  display: flex;
-  flex-direction: column;
-  height: 196px;
-  margin-bottom: 18px;
+  margin-bottom: 22px; /* Espace entre header le block suivant */
 }
 #ligne_logo_nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 52px;
+  display: flex; /* Application de Flexbox pour ranger les éléments de la première ligne de header */
+  justify-content: space-between; /* Propriété appliqué grace au Flexbox */
+  margin-top: 52px; /* Margins et paddings sont utilisés dans toute la page pour établir les espaces nécessaires entre les éléments */
 }
 header img {
   margin-top: 8px;
 }
 nav ul {
-  list-style-type: none;
-  display: flex;
+  list-style-type: none; /*Pour enlever les puces de liste à puces - propriété utilisé dans toute la page pour les <ul> */
+  display: flex; /* Pour ranger les éléments dans une ligne */
   padding-left: 0px;
 }
 nav li {
@@ -64,7 +53,6 @@ nav li {
 }
 .top_nav {
   padding-top: 50px;
-  margin-top: 0px;
 }
 #hebergements_option {
   padding-left: 25px;
@@ -78,12 +66,12 @@ nav li {
   padding-left: 25px;
 }
 nav a {
-  color: black;
+  color: black; /* Définition de l'apparence des éléments de la navigation */
   text-decoration: none;
   border-top: 2px solid #ffffff;
 }
 nav a:hover {
-  color: #0065fc;
+  color: #0065fc; /* L'apparence des éléments de la navigation au survol */
   border-top: 2px solid #0065fc;
 }
 header h1 {
@@ -96,28 +84,25 @@ header p {
   padding-top: 0px;
 }
 #nav_filtres {
-  display: flex;
-  flex-direction: column;
   height: 190px;
 }
 #recherche_form {
-  display: flex;
-  max-width: 420px;
-  width: 100%;
+  display: flex; /* Pour ranger les éléments dans une ligne */
+  max-width: 420px; /* Définition de taille maximale */
   max-height: 52px;
 }
 #icone_recherche {
-  background-color: #f2f2f2;
-  border-radius: 15px 0px 0px 15px;
+  background-color: #f2f2f2; /* La couleur grise utilisé dans toute la page */
+  border-radius: 15px 0px 0px 15px; /* Les bordures arrondies */
   padding-right: 18px;
 }
 .fa-map-marker-alt {
-  font-size: 1.1em;
+  font-size: 1.1em; /* Les propiétés d'apparence de l'icone */
   color: black;
-  padding: 18px 0px 6px 18px;
+  padding: 18px 0px 6px 18px; /* Le positionnement de l'icone dans sa <div> */
 }
 .champ_recherche {
-  max-width: 235px;
+  max-width: 235px; /* Les propiétés d'apparence de champ de recherche */
   font-family: "Raleway", sans-serif;
   font-size: 1.1em;
   font-weight: bold;
@@ -130,7 +115,7 @@ header p {
   border: 1px solid #f2f2f2;
 }
 .boutton {
-  color: white;
+  color: white; /* Les propiétés d'apparence de boutton de recherche */
   font-family: "Raleway", sans-serif;
   font-size: 1.2em;
   font-weight: normal;
@@ -140,17 +125,17 @@ header p {
   border-left: none;
   height: 52px;
   width: 134px;
-  cursor: pointer;
-  border: none;
+  cursor: pointer; /* Apparition de 'petite main' au lieu de flèche au survol */
+  border: none; /* Enlève la bordure de boutton qui est définie par défaut */
 }
 .boutton:hover {
-  background: #0000ff;
+  background: #0000ff; /* L'apparence de boutton de recherche au survol */
 }
 .loupe {
-  display: none;
+  display: none; /* Visibilité caché dans les versions PC et tablette, destiné à la version mobile */
 }
 #filtres {
-  display: flex;
+  display: flex; /* Pour ranger les éléments dans une ligne */
   margin-left: 9px;
   margin-bottom: 30px;
 }
@@ -165,20 +150,18 @@ header p {
 }
 #filtres ul {
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Propriété flex hérité depuis 'nav ul'; permet les éléments de se ranger un sous l'autre fur et à mesure en réduisant la taille de l'écran */
   padding-left: 31px;
   margin-top: 28px;
 }
 .champs_filtres {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Pour aligner les éléments correctement sur l'axe secondaire */
   cursor: pointer;
   margin-right: 25px;
 }
 .texte_filtre {
-  background: #ffffff;
+  background: #ffffff; /* Les propiétés d'apparence de la partie texte de filtre */
   font-size: 1.1em;
   color: #000000;
   font-family: "Raleway", sans-serif;
@@ -186,10 +169,10 @@ header p {
   text-decoration: none;
   border: 2px solid #d9d9d9;
   border-radius: 0px 30px 30px 0px;
-  border-left: none;
+  border-left: none; /* Ne pas doubler les bordures */
   padding: 14px 22px 13px 35px;
   margin-left: -21px;
-  z-index: 1;
+  z-index: 1; /* L'apparence secondaire par rapport de champ de l'icone sur le filtre */
 }
 #texte_romant {
   padding: 14px 14px 13px 35px;
@@ -198,12 +181,12 @@ header p {
 .fa-child,
 .fa-heart,
 .fa-dog {
-  background-color: #deebff;
+  background-color: #deebff; /* Les propiétés d'apparence de la partie icone de filtre */
   color: #0065fc;
   font-size: 1.4em;
-  border-radius: 100%;
+  border-radius: 100%; /* Création de cercle autour de l'icone */
   margin-right: 0px;
-  z-index: 2;
+  z-index: 2; /* L'apparence prioritaire par rapport de champ de texte sur le filtre */
 }
 #icone_eco {
   padding: 17px 13px 17px 13px;
@@ -219,18 +202,16 @@ header p {
   padding: 15px 12px 14px 12px;
 }
 #filtres span:hover {
-  color: #0065fc;
+  color: #0065fc; /* L'apparence de filtres au survol */
   background-color: #f2f2f2;
   border: 1px solid #d9d9d9;
 }
 #info {
-  display: flex;
+  display: flex; /* Pour ranger les éléments dans une ligne */
   margin-left: 6px;
 }
 #info ul {
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-left: 0px;
 }
@@ -241,7 +222,7 @@ header p {
   flex-wrap: wrap;
 }
 .fa-info {
-  border: 1px #deebff solid;
+  border: 1px #deebff solid; /* Les propiétés d'apparence de l'icone */
   color: #0065fc;
   font-size: 0.7em;
   border-radius: 100%;
@@ -250,23 +231,20 @@ header p {
   padding: 5px 9px 6px 9px;
 }
 #section_hotels {
-  display: flex;
-  height: 626px;
+  display: flex; /* Pour pouvoir ranger correctement les éléments de la section */
+  height: 626px; /* Définition des tailles de la section */
   max-width: 1340px;
   margin-top: 42px;
 }
 #hebergements_marseille:nth-child(1) {
-  flex: 2.1;
+  flex: 2.1; /* Définition de rapport et taille de deux éléments dans la section */
 }
 #hebergements_populaires:nth-child(2) {
   flex: 1;
 }
 #hebergements_marseille {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #f2f2f2;
-  border-radius: 22px 22px 22px 22px;
+  background-color: #f2f2f2; /* Couleur de l'arrière plan de block */
+  border-radius: 22px 22px 22px 22px; /* Les bordures arrondies */
   margin-right: 40px;
 }
 #hebergements_marseille h2 {
@@ -275,7 +253,7 @@ header p {
   margin-bottom: 22px;
 }
 #hebergements_marseille a {
-  display: flex;
+  display: flex; /* Définition des propriétés de la carte cliquable */
   flex-direction: column;
   justify-content: flex-start;
   color: #000000;
@@ -285,16 +263,17 @@ header p {
   border-radius: 22px 22px 22px 22px;
 }
 #hebergements_marseille a:hover {
-  box-shadow: 13px 10px 28px #000000;
+  box-shadow: 13px 10px 28px #000000; /* Appliquation des ombres au survol */
   border-radius: 22px 22px 22px 22px;
 }
 #lien_bas {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif; /* Les propiétés d'apparence de 'Afficher plus' */
   margin-left: 46px;
   text-decoration: none;
   font-size: 1.1em;
   font-weight: bold;
   color: #000000;
+  cursor: pointer;
   border: none;
 }
 #lien_bas:hover {
@@ -302,34 +281,26 @@ header p {
   text-decoration: underline;
 }
 #hebergements_cartes {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Les propiétés d'apparence des cartes dans son bloc; les proprietés suivantes de flex permettent les éléments de se ranger correctement et fur et à mesure en réduisant la taille de l'écran */
+  justify-content: space-between; /* Ces propriétés flex permettent la page d'être naturellement adaptative à la taille de l'écran. Pareil pour les blocks 'Les plus populaires' et 'Activités */
   flex-wrap: wrap;
   margin: 2px 10px 10px 40px;
   height: 460px;
   max-width: 800px;
 }
 .cartes_marseille {
-  height: 100%;
+  height: 100%; /* Les propiétés d'apparence de chaque carte dans ce block */
   width: 245px;
   background-color: #ffffff;
   border-radius: 22px 22px 22px 22px;
-  box-shadow: 13px 10px 28px #d4d4d4;
+  box-shadow: 13px 10px 28px #d4d4d4; /* Appliquation des ombres au cartes */
 }
 .contenu_catre {
   margin: 5px 5px 5px 5px;
 }
 .img_marseille {
-  border-radius: 17px 17px 0px 0px;
-}
-#cannebiere,
-#hotel_port,
-#hotel_mouettes,
-#hotel-mer,
-#auberge_panier,
-#hotel_amina,
-.marseille_tab {
-  display: none;
+  border-radius: 17px 17px 0px 0px; /* Les bordures arrondies en haut des photos */
+  width: 100%;
 }
 .texte_marseille {
   margin-left: 11px;
@@ -341,7 +312,7 @@ ul {
   margin-bottom: 0px;
 }
 .etoiles {
-  list-style-type: none;
+  list-style-type: none; /* Les propiétés d'apparence des étoiles dans les cartes */
   display: flex;
   padding-left: 0px;
   margin-top: 8px;
@@ -349,14 +320,11 @@ ul {
   color: #0065fc;
 }
 .etoile_grise {
-  color: #f2f2f2;
+  color: #d9d9d9;
 }
-#populaires {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 420px;
-  background-color: #f2f2f2;
+
+#hebergements_populaires {
+  background-color: #f2f2f2; /* Propriétés de l'arrière plan de block */
   border-radius: 22px 22px 22px 22px;
 }
 #titre_populaires {
@@ -377,21 +345,15 @@ ul {
   color: #000000;
   font-size: 1.4em;
 }
-#hebergements_populaires {
-  display: flex;
-  flex-direction: column;
-  background-color: #f2f2f2;
-  border-radius: 22px 22px 22px 22px;
-}
 #populaires_cartes {
-  display: flex;
+  display: flex; /* Les propiétés d'apparence des cartes dans son bloc */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 499px;
 }
 .cartes_populaires {
-  height: 144px;
+  height: 144px; /* Les propiétés d'apparence de chaque carte dans ce block */
   width: 343px;
   background-color: #ffffff;
   border-radius: 22px 22px 22px 22px;
@@ -399,7 +361,7 @@ ul {
   color: #000000;
 }
 #populaires_cartes a {
-  display: flex;
+  display: flex; /* Définition des propriétés de la carte cliquable */
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
@@ -408,15 +370,15 @@ ul {
   color: #000000;
 }
 #populaires_cartes a:hover {
-  box-shadow: 13px 10px 28px #000000;
+  box-shadow: 13px 10px 28px #000000; /* Définition des propriétés de la carte cliquable au survol */
   border-radius: 22px 22px 22px 22px;
 }
 .contenu_populaire {
-  display: flex;
+  display: flex; /* L'apparition des éléments dans la carte d'hébergement */
   margin: 5px 5px 5px 5px;
 }
 .img_populaires {
-  border-radius: 17px 0px 0px 17px;
+  border-radius: 17px 0px 0px 17px; /* Bordures de photos arrondies sur la côté gauche */
 }
 .texte_populaires {
   width: 142px;
@@ -436,13 +398,10 @@ ul {
   margin-top: 0px;
 }
 #section_activites {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  margin-top: 38px;
+  margin-top: 60px;
 }
 #activites {
-  display: flex;
+  display: flex; /* Les propiétés d'apparence des cartes dans son bloc */
   justify-content: space-between;
   height: auto;
   max-width: 1340px;
@@ -450,15 +409,11 @@ ul {
 .img_activites {
   border-radius: 17px 17px 0px 0px;
 }
-.img_activites_mob,
-.img_activites_tab {
-  display: none;
-}
 #section_activites h3 {
   margin-left: 18px;
 }
 .une_image {
-  height: 445px;
+  height: 445px; /* Les propriétés suivantes définissent l'apparence de chaque carte et sa partie cliquable */
   box-shadow: 13px 2px 28px #d9d9d9;
   border-radius: 22px 22px 22px 22px;
 }
@@ -503,29 +458,23 @@ ul {
   box-shadow: 13px 2px 28px #d9d9d9;
   color: #000000;
 }
-footer {
-  justify-content: center;
-}
 #footer_content {
-  display: flex;
-  max-height: 217px;
+  display: flex; /* Définition de flex pour ranger correctement les éléments de footer */
   background-color: #f2f2f2;
   margin-top: 58px;
-  max-width: 1440px;
+  padding-bottom: 36px;
 }
 .colonnes_footer h3 {
   margin-top: 0px;
-  margin-bottom: 6px;
+  margin-bottom: 21px;
   font-size: 1.1em;
 }
 .colonnes_footer {
-  max-width: 455px;
+  max-width: 455px; /* Les propiétés d'apparence des colonnes de footer dans son bloc */
   width: 100%;
 }
 #footer_content ul {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
   padding-left: 48px;
   margin-top: 45px;
 }
@@ -533,11 +482,11 @@ footer {
   margin-bottom: 14px;
 }
 .colonnes_footer a {
-  text-decoration: none;
+  text-decoration: none; /* Les propiétés d'apparence des liens de footer */
   color: #000000;
 }
 .colonnes_footer a:hover {
-  color: #0065fc;
+  color: #0065fc; /* L'apparence des liens de footer au survol */
   text-decoration: underline;
 }
 
@@ -548,14 +497,12 @@ footer {
     font-size: 1.03em;
   }
   header {
-    height: auto; /* Pour laisser header s'adapter automatiquement au largeur d'écran et aux ses éléments */
+    height: auto; /* Pour laisser header s'adapter automatiquement à la hauteur nécessaire */
     margin-top: 25px;
-    margin-bottom: 0px;
   }
   #ligne_logo_nav {
     margin-top: 0px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Permet les éléments de cette <div> aller à la ligne */
   }
   header img {
     margin-top: 0px;
@@ -563,9 +510,7 @@ footer {
   }
   nav {
     width: 100%;
-    min-width: 250px;
     margin-top: 25px;
-    display: flex;
   }
   nav li {
     margin-right: 0px;
@@ -574,7 +519,7 @@ footer {
     padding-top: 0px;
   }
   #hebergements_option {
-    position: absolute;
+    position: absolute; /* Positionnement des éléments de navigation pour définir les distances de chaque côté dans la page */
     left: 0px;
     top: 96px;
     padding: 0% 36px 14px 36px; /* Pour definir la position de la ligne 'active' en bas de choix de navigation; pareil pour #activites_option */
@@ -590,7 +535,7 @@ footer {
     position: absolute;
     right: 10px;
     top: 40px;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff; /* N'a pas de ligne en bas selon la maquette */
     padding: 0px;
   }
   nav a {
@@ -602,7 +547,7 @@ footer {
     border-bottom: 3px solid #f2f2f2;
   }
   nav a:active {
-    border-top: none;
+    border-top: none; /* Définit l'apparence au clique au lieu de survol */
     border-bottom: 3px solid #0065fc;
   }
   #sinscrire_option:hover {
@@ -612,7 +557,7 @@ footer {
     border-bottom: 3px solid #0065fc;
   }
   header h1 {
-    width: 81%;
+    width: 81%; /* Rends le <h1> adaptable jusqu'à la taille minimale de l'écran */
     margin-top: 64px;
     padding-left: 18px;
     font-size: 1.3em;
@@ -624,10 +569,14 @@ footer {
     width: 90%;
     padding-left: 18px;
   }
+  #nav_filtres {
+    flex-direction: column; /* Propriété flex pour le rangement correct de ce block */
+    height: auto; /* La hauteur de <div> s'adapte autamatiquement */
+    margin-top: 36px;
+  }
   #recherche_form {
-    max-width: 349px;
+    max-width: 349px; /* Rends la <div> recherche adaptable jusqu'à la taille minimale de l'écran et selon la maquette */
     width: 90%;
-    position: unset;
     padding-left: 18px;
   }
   .champ_recherche {
@@ -640,17 +589,17 @@ footer {
     min-width: 90px;
   }
   .loupe {
-    display: block;
+    display: block; /* L'icone de loupe au lieu de mot 'Rechercher' dans le champ de recherche */
   }
   .boutton {
-    display: none; /* L'icone de loupe au lieu de mot 'Rechercher' dans le champ de recherche */
+    display: none;
   }
   #boutton_submit {
-    position: relative;
+    position: relative; /* Position précise de boutton par rapport sa position initiale */
     right: 20px;
   }
   .loupe {
-    color: white;
+    color: white; /* Les propiétés d'apparence de boutton de recherche avec la loupe */
     font-family: "Raleway", sans-serif;
     font-size: 1.1em;
     font-weight: normal;
@@ -660,24 +609,16 @@ footer {
     border-left: none;
     height: 52px;
     width: 52px;
-    cursor: pointer;
     border: none;
   }
   .loupe:active {
-    background-color: #0000ff;
+    background-color: #0000ff; /* L'apparence au clique */
   }
   #filtres {
     flex-direction: column; /* Pour afficher le titre et les filtres un sous l'autre */
-    margin-top: 4px;
-    margin-bottom: 21px;
-    padding-left: 18px;
-    margin-left: 0px;
-  }
-  #nav_filtres {
-    height: auto;
+    margin: 4px 0px 21px 18px;
   }
   #filtres ul {
-    position: unset; /* Pour enlèver la position 'absolute' de nav ul */
     padding-left: 0px;
     margin-top: 16px;
   }
@@ -686,15 +627,13 @@ footer {
     margin-bottom: 0px;
   }
   .champs_filtres {
-    align-items: stretch;
+    align-items: stretch; /* Aligne le contenu de filtre */
     margin-right: 10px;
     margin-bottom: 12px;
   }
   .texte_filtre {
-    /* La taille de filtres est plus petite dans la version media, les commandes suivantes modifient leur taille */
-    font-size: 1em;
+    font-size: 1em; /* La taille de filtres est plus petite dans la version media, les commandes suivantes modifient leur taille */
     padding: 14px 16px 13px 34px;
-    flex-wrap: nowrap;
   }
   #texte_romant {
     padding: 14px 10px 13px 30px;
@@ -703,7 +642,7 @@ footer {
   .fa-child,
   .fa-heart,
   .fa-dog {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Corrections de champs des icones selon la maquette en taille mobile */
   }
   #icone_child {
     padding: 15px 17px 15px 17px;
@@ -715,8 +654,7 @@ footer {
     padding: 16px 14px 15px 14px;
   }
   #filtres span:hover {
-    /* Les filtres changent l'apparence au click et ne pas au survol */
-    color: #000000;
+    color: #000000; /* Les filtres changent l'apparence au click et ne pas au survol */
     background-color: #ffffff;
     border: 2px solid #d9d9d9;
   }
@@ -731,7 +669,6 @@ footer {
   #info ul {
     margin-left: 15px;
     margin-top: -2%;
-    position: unset;
   }
   #info_texte {
     font-size: 0.96em;
@@ -740,28 +677,26 @@ footer {
     margin-bottom: 20px;
   }
   #section_hotels {
-    height: auto;
-    width: 100%;
-    min-width: 250px;
+    height: auto; /* La hauteur s'adapte automatiquement */
+    min-width: 250px; /* Taille minimale de la section */
     flex-direction: column; /* Dans la version media les deux blocks des hébergements sont placés un sous l'autre */
     margin-top: 32px;
   }
   #hebergements_marseille {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Block n'a pas de couleur de fond dans la version mobile selon la maquette */
     margin-right: 0px;
     min-width: 250px;
   }
   #hebergements_marseille:nth-child(1) {
-    /* Dans la version media les deux blocks des hébergements changent l'ordre */
-    order: 2;
+    order: 2; /* Les deux blocks des hébergements changent l'ordre dans la version media  */
   }
   #hebergements_populaires:nth-child(2) {
     order: 1;
   }
   #hebergements_marseille a {
-    width: 90%;
-    max-width: 375px;
-    height: 100%;
+    width: 90%; /* Définit la taille des cartes cliquables par rapport de son block */
+    max-width: 375px; /* Ne permet pas les cartes de'agrandir plus que taille définie en agrandissant la taille de l'écran */
+    height: 100%; /* Remplace la taille définie pour les PC en prenant toute l'espace */
     margin-bottom: 3%;
     min-width: 250px;
   }
@@ -769,28 +704,22 @@ footer {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
   }
   #hebergements_marseille a:active {
-    /* Les liens ont un effet au click */
-    box-shadow: 13px 10px 28px #000000;
+    box-shadow: 13px 10px 28px #000000; /* Les liens ont un effet au click */
     border-radius: 22px 22px 22px 22px;
   }
   #hebergements_marseille h2 {
     margin: 39px 0px 17px 5%;
   }
   #hebergements_cartes {
-    flex-direction: column;
+    flex-direction: column; /* Adaptation de l'apparence des cartes dans son bloc */
     align-items: center;
     height: auto;
     margin: 0px;
   }
   .cartes_marseille {
-    display: flex;
+    display: flex; /* Définit la taille des cartes par rapport de son block et sa partie ciquable */
     width: 100%;
     min-width: 250px;
-  }
-  .img_marseille,
-  .marseille_tab {
-    /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
-    display: none;
   }
   #cannebiere,
   #hotel_port,
@@ -798,8 +727,6 @@ footer {
   #hotel-mer,
   #auberge_panier,
   #hotel_amina {
-    display: block;
-    border-radius: 17px 17px 0px 0px;
     width: 100%;
   }
   .texte_marseille {
@@ -829,7 +756,7 @@ footer {
     text-decoration: none;
   }
   #hebergements_populaires {
-    border-radius: unset;
+    border-radius: unset; /* Le couleur de fond de ce block n'a pas de bordures arrondies dans la version mobile selon la maquette */
     width: 100%;
     min-width: 250px;
   }
@@ -842,39 +769,35 @@ footer {
     margin: 5% 0px 21px 0px;
   }
   #populaires_cartes a {
-    width: 90%;
+    width: 90%; /* Définit la taille des cartes cliquables par rapport de son block */
     height: auto;
     margin-bottom: 10px;
-    min-width: 250px; /* Le texte ne sort pas de son block en petite taille d'écran */
+    min-width: 250px;
   }
   #populaires_cartes a:hover {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
   }
   #populaires_cartes a:active {
-    /* Les liens ont un effet au click */
-    box-shadow: 13px 10px 28px #000000;
+    box-shadow: 13px 10px 28px #000000; /* Les liens ont un effet au click */
     border-radius: 22px 22px 22px 22px;
   }
   #hebergements_populaires h2 {
     margin: 0px;
   }
   #populaires_cartes {
-    width: 100%;
+    width: 100%; /* Définit la taille block des cartes */
     height: auto;
     margin-bottom: 8%;
   }
   .cartes_populaires {
-    width: 100%;
+    width: 100%; /* Définit la taille des cartes par rapport de son block et sa partie ciquable */
     max-width: 375px;
     min-width: 250px;
     height: auto;
     margin: auto;
   }
-  .contenu_populaire {
-    width: auto;
-  }
   .texte_populaires {
-    height: 100%;
+    height: 100%; /* Permet le contenu de texte rester dans la carte en très petites tailles */
   }
   .texte_populaires h4 {
     margin-bottom: 28%;
@@ -891,7 +814,7 @@ footer {
     margin-left: 5%;
   }
   #activites {
-    flex-direction: column; /*Les photos sont placés en colonne dans la version mobile */
+    flex-direction: column; /*Les cartes sont placés en colonne dans la version mobile; les propriétés suivantes déterminent l'apparence des cartes d'Activités */
     align-items: center;
     width: 100%;
     min-width: 250px;
@@ -904,7 +827,7 @@ footer {
   }
   #activites a {
     display: block;
-    width: 90%;
+    width: 90%; /* Définit la taille des cartes cliquables par rapport de son block */
     max-width: 375px;
     max-height: 199px;
     margin-bottom: 6%;
@@ -930,8 +853,6 @@ footer {
   #nd_garde,
   #parc_longchamp,
   .une_image {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: 375px;
     min-width: 250px;
@@ -939,24 +860,16 @@ footer {
     height: 100%;
     padding-bottom: 2%;
   }
-  .img_activites,
-  .img_activites_tab {
-    display: none; /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
-  }
-  .img_activites_mob {
-    display: block;
+  .img_activites {
     border-radius: 17px 17px 0px 0px;
     width: 100%;
-  }
-  footer {
-    height: auto;
   }
   #footer_content {
     flex-direction: column; /* Le footer est aligné en colonne en version mobile */
     align-items: center;
     width: 100%;
     margin-top: 40px;
-    max-height: none;
+    padding-bottom: 0px;
   }
   #colone_apropos {
     margin-top: 5%;
@@ -983,11 +896,11 @@ footer {
 }
 
 @media all and (min-width: 637px) and (max-width: 1208px) {
-  /* Version tablette et écran PC de petite taille */
+  /* Version tablette et écran PC de taille moyenne/ petite  */
   p,
   li,
   header p {
-    font-size: 0.9em;
+    font-size: 0.9em; /* Définition de la taille et apparence des polices utilisés dans la version tablette */
   }
   h2 {
     font-size: 1.3em;
@@ -1020,15 +933,15 @@ footer {
     text-decoration: none;
   }
   nav a:active {
-    color: #0065fc;
+    color: #0065fc; /* Définit l'apparence au clique au lieu de survol */
     text-decoration: underline;
     border-top: none;
   }
   #filtres {
-    flex-direction: column;
+    flex-direction: column; /* Propriété flex pour le rangement des éléments en colonne */
   }
   #nav_filtres {
-    height: auto;
+    height: auto; /* Pour laisser la <div> s'adapter automatiquement à la hauteur nécessaire */
   }
   #filtres ul {
     margin-top: 10px;
@@ -1041,9 +954,8 @@ footer {
     margin-bottom: 5px;
   }
   #filtres span:hover {
-    /* Les filtres changent l'apparence au click et ne pas au survol */
     color: #000000;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Les filtres changent l'apparence au click et ne pas au survol */
     border: 2px solid #d9d9d9;
   }
   #filtres span:active {
@@ -1052,20 +964,19 @@ footer {
     border: 1px solid #d9d9d9;
   }
   #section_hotels {
-    height: auto;
+    height: auto; /* Pour laisser la section s'adapter automatiquement à la hauteur nécessaire */
     flex-direction: column; /* Dans la version media les deux blocks des hébergements sont placés un sous l'autre */
     margin-top: 16px;
   }
   #hebergements_marseille {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Block n'a pas de couleur de fond dans la version tablette */
     margin-right: 0px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #f2f2f2;
-    border-radius: 0px 0px 0px 0px;
+    border-bottom: 2px solid #f2f2f2; /* Ligne en bas de block dans la version tablette */
+    border-radius: 0px 0px 0px 0px; /* Ligne définie au dessus sans les bords arrondies */
   }
   #hebergements_marseille:nth-child(1) {
-    /* Dans les versions tablette et mobile les deux blocks d'hébergements changent l'ordre */
-    order: 2;
+    order: 2; /* Les deux blocks d'hébergements changent l'ordre dans les versions tablette et mobile */
   }
   #hebergements_populaires:nth-child(2) {
     order: 1;
@@ -1077,28 +988,17 @@ footer {
     box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
   }
   #hebergements_marseille a:active {
-    /* Les liens ont un effet au click */
-    box-shadow: 13px 10px 28px #000000;
+    box-shadow: 13px 10px 28px #000000; /* Les liens ont un effet au click */
     border-radius: 22px 22px 22px 22px;
   }
   #hebergements_cartes {
-    justify-content: space-around;
+    justify-content: space-around; /* Modifications adaptatives pour meilleur rangement des éléments dans le block au changement de la taille de l'écran */
     height: auto;
     margin: auto;
     max-width: 1208px;
   }
   .cartes_marseille {
     width: 100%;
-  }
-  .img_marseille,
-  #cannebiere,
-  #hotel_port,
-  #hotel_mouettes,
-  #hotel-mer,
-  #auberge_panier,
-  #hotel_amina {
-    /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
-    display: none;
   }
   .marseille_tab {
     display: block;
@@ -1116,21 +1016,19 @@ footer {
     text-decoration: none;
   }
   #hebergements_populaires a {
-    width: 100%;
+    width: 100%; /* Définit les tailles de cartes cliquables */
     max-width: 284px;
     margin-bottom: 25px;
   }
   #hebergements_populaires a:hover {
-    /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
-    box-shadow: none;
+    box-shadow: none; /* Le lien ne gardera pas l'ombre, une fois cliqué (au survol) */
   }
   #hebergements_populaires a:active {
-    /* Les liens ont un effet au click */
-    box-shadow: 13px 10px 28px #000000;
+    box-shadow: 13px 10px 28px #000000; /* Les liens ont un effet au click */
     border-radius: 22px 22px 22px 22px;
   }
   #populaires_cartes {
-    flex-direction: row;
+    flex-direction: row; /* Modifications adaptatives pour meilleur rangement des éléments dans le block au changement de la taille de l'écran */
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
@@ -1155,7 +1053,7 @@ footer {
     margin-top: 10px;
   }
   #activites a {
-    width: 100%;
+    width: 100%; /* Définit les tailles de cartes cliquables */
     max-width: 310px;
     margin-bottom: 1%;
     margin-right: 3%;
@@ -1181,12 +1079,7 @@ footer {
     height: 100%;
     padding-bottom: 2%;
   }
-  .img_activites,
-  .img_activites_mob {
-    display: none; /* Les autres tailles de photos sont utilisés dans la version media. Less photos de vercion PC sont remplacés */
-  }
-  .img_activites_tab {
-    display: block;
+  .img_activites {
     border-radius: 17px 17px 0px 0px;
     width: 100%;
   }
@@ -1199,6 +1092,6 @@ footer {
   /* Version PC en plus petite taille que dans la maquette */
   header,
   #nav_filtres {
-    padding-left: 18px;
+    padding-left: 18px; /* Pour garder l'espace entre l'écran et le contenu d'haut de page en ce taille d'écran */
   }
 }

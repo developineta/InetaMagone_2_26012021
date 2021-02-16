@@ -2,34 +2,34 @@
 <html lang="fr">
 	<head>
         <meta charset="utf-8">
-        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name=viewport content="width=device-width, initial-scale=1"> <!-- Ajout de Viewport pour utilisation de Media quaries -->
 		<title>Reservia</title>
         <link rel="stylesheet" href="style.css" type = "text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet" type="text/css">
-        <script src="https://kit.fontawesome.com/d034506d63.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" type="text/css"> <!-- Ajout de police Google Raleway -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet" type="text/css"> <!-- Ajout de police Google Raleway en gras -->
+        <script src="https://kit.fontawesome.com/d034506d63.js" crossorigin="anonymous"></script> <!-- Ajout de lien vers bibliothèque Font Awesome -->
 	</head>
 	<body>
-        <div id="bloc_page">
-            <header>
-                <div id="ligne_logo_nav">
-                    <img src="images/logo/Reservia_3x.png" alt="Logo de Reservia" />
-                    <nav>
-                        <ul>
-                            <li><a href="#hebergements_marseille" class="top_nav" id="hebergements_option">Hébergements</a></li>
+        <div id="bloc_page"> <!-- Definition de la partie intègrale de la page sans footer -->
+            <header> <!-- Pour structurer la page; contenu de header va dans cette partie -->
+                <div id="ligne_logo_nav"> <!-- Les éléments dans ce code sont rangés en <div> pour les ranger correctement et pour pouvoir les cibler individuellement en CSS -->
+                    <img src="images/Logo_Reservia.png" alt="Logo de Reservia" />
+                    <nav> <!-- Le contenu de la bare de navigation va dans cette partie -->
+                        <ul> <!-- Les éléments de la navigation rangés en liste à puces -->
+                            <li><a href="#hebergements_marseille" class="top_nav" id="hebergements_option">Hébergements</a></li> <!-- Les éléments dans ce code sont rangés en <class> pour pouvoir les cibler à plusieurs en CSS -->
                             <li><a href="#section_activites" class="top_nav" id="activites_option">Activités</a></li>
                             <li><a href="#" class="top_nav" id="sinscrire_option"><strong>S'inscrire</strong></a></li>
                         </ul>
                     </nav>
                 </div>
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1> <!-- Le titre principal de la page -->
                 <p>En plein centre ville ou en pleine nature</p>
             </header>
 
-            <nav id="nav_filtres">
-                <form action="action_page.php" id="recherche_form" >
+            <nav id="nav_filtres"> <!-- Pour structurer la page; le contenu de navigation - recherche et filtres - vont dans cette partie -->
+                <form action="action_page.php" id="recherche_form" > <!-- Le forme pour créer le champ de saisie et boutton de recherche -->
                     <div id="icone_recherche">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt"></i> <!-- L'icone à partir de la bibliothèque Font Awesome -->
                     </div>
                     <div id="texte_recherche">
                         <input type="text" class="champ_recherche" value="Marseille, France" />
@@ -42,10 +42,10 @@
 
                 <div id="filtres">
                     <p id="titre_filtres">Filtres</p>
-                    <ul>
+                    <ul> <!-- Les filtres sont rangés en liste à puces -->
                         <li class="champs_filtres" id="economique">
                             <i class="fas fa-money-bill-wave" id="icone_eco"></i>
-                            <span class="texte_filtre">Économique</span>
+                            <span class="texte_filtre">Économique</span> <!-- <span> utilisé pour placer les éléments correctement un par rapport un de l'autre et cibler le texte dans CSS-->
                         </li>
                         <li class="champs_filtres" id="familial">
                             <i class="fas fas fa-child" id="icone_child"></i>
@@ -63,33 +63,35 @@
                 </div>
 
                 <div id="info">
-                    <ul>
+                    <ul> <!-- Les deux éléments sont rangés en liste à puces pour les placer correctement -->
                         <li><i class="fas fa-info"></i></li>
                         <li><span id="info_texte">Plus de 500 logements sont disponibles dans cette ville</span></li>
                     </ul>
                 </div>
             </nav>
 
-            <section id="section_hotels">
+            <section id="section_hotels"> <!-- Pour structurer la page; le contenu d'une section va dans cette partie -->
                 <div id="hebergements_marseille">
-                    <h2>Hébergements à Marseille</h2>
-                    <div id="hebergements_cartes">
-                        <a href="#" target="_blank">
+                    <h2>Hébergements à Marseille</h2> <!-- <h2> est utilisé pour tous les titres de blocks de même importance -->
+                    <div id="hebergements_cartes"> <!-- Contient toutes les cartes de ce block pour pouvoir le cibler en CSS -->
+                        <a href="#" target="_blank"> <!-- Chaque carte d'hébergement va dans la balise <a> pour créer les cartes cliquables dans son intégralité -->
                             <div class="cartes_marseille" >
                                 <figure class="contenu_catre">
-                                    <!-- Dans toute la division id="hebergements_cartes" la première photo inséré est pour la version ordinateur et la deuxième pour la version mobile -->
-                                    <img src="images/hebergements/cannebiere.jpg" class="img_marseille" alt="Auberge le Cannebière" /> 
-                                    <img src="images/hebergements/media/cannebiere_mob.jpg" id="cannebiere" alt="Auberge le Cannebière" />
-                                    <img src="images/hebergements/media/cannebiere_tab.jpg" class="marseille_tab" alt="Auberge le Cannebière" />
-                                    <div class="texte_marseille">
-                                        <h3>Auberge le Cannebière</h3>
-                                        <h4>Nuit à partir de <strong>25€</strong></h4>
-                                        <ul class="etoiles">
+                                    <picture> <!-- Les photos sont adaptés à chaque taille de l'écran -->
+                                        <source media="(min-width: 1209px)" srcset="images/hebergements/cannebiere.jpg">
+                                        <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/hebergements/media/cannebiere_tab.jpg">
+                                        <source media="(max-width: 636px)" srcset="images/hebergements/media/cannebiere_mob.jpg">
+                                        <img src="images/hebergements/cannebiere.jpg" class="img_marseille" alt="Auberge le Cannebière" />
+                                    </picture>
+                                    <div class="texte_marseille"> <!-- L'apparence des textes dans les cartes de même block est pareil; le 'class' est utilisé pour cibler tous ces textes le même temps -->
+                                        <h3>Auberge le Cannebière</h3> <!-- <h3> est utilisé pour tous les titres de cartes des hébergements -->
+                                        <h4>Nuit à partir de <strong>25€</strong></h4> <!-- <strong> est utilisé dans les sections pour cibler les textes en gras -->
+                                        <ul class="etoiles"> <!-- Rangés en liste à puces pour les placer correctement -->
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
-                                            <li class="etoile_grise"><i class="fas fa-star"></i></li>
+                                            <li class="etoile_grise"><i class="fas fa-star"></i></li> <!-- Les étoiles de couleur differnte sont ciblés apart des autres -->
                                         </ul>
                                     </div>
                                 </figure>
@@ -98,12 +100,15 @@
                         <a href="#" target="_blank">
                             <div class="cartes_marseille">
                                 <figure class="contenu_catre">
-                                    <img src="images/hebergements/hotel_port.jpg" class="img_marseille" alt="Hôtel du port" />
-                                    <img src="images/hebergements/media/hotel_port_mob.jpg" id="hotel_port" alt="Hôtel du port" />
-                                    <img src="images/hebergements/media/hotel_port_tab.jpg" class="marseille_tab" alt="Hôtel du port" />
+                                    <picture>
+                                        <source media="(min-width: 1209px)" srcset="images/hebergements/hotel_port.jpg">
+                                        <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/hebergements/media/hotel_port_tab.jpg">
+                                        <source media="(max-width: 636px)" srcset="images/hebergements/media/hotel_port_mob.jpg">
+                                        <img src="images/hebergements/hotel_port.jpg" class="img_marseille" alt="Hôtel du port" />
+                                    </picture>
                                     <div class="texte_marseille">
                                         <h3>Hôtel du port</h3>
-                                        <h4>Nuit à partir de 52<strong>€</strong></h4>
+                                        <h4>Nuit à partir de 52<strong>€</strong></h4> <!-- <h4> est utilisé pour tous les textes de cartes des hébergements -->
                                         <ul class="etoiles">
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
@@ -118,13 +123,16 @@
                         <a href="#" target="_blank">
                             <div class="cartes_marseille">
                                 <figure class="contenu_catre">
-                                    <img src="images/hebergements/hotel_mouettes.jpg" class="img_marseille" alt="Hôtel Les mouettes" />
-                                    <img src="images/hebergements/media/hotel_mouettes_mob.jpg" id="hotel_mouettes" alt="Hôtel Les mouettes" />
-                                    <img src="images/hebergements/media/hotel_mouettes_tab.jpg" class="marseille_tab" alt="Hôtel Les mouettes" />
+                                    <picture>
+                                        <source media="(min-width: 1209px)" srcset="images/hebergements/hotel_mouettes.jpg">
+                                        <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/hebergements/media/hotel_mouettes_tab.jpg">
+                                        <source media="(max-width: 636px)" srcset="images/hebergements/media/hotel_mouettes_mob.jpg">
+                                        <img src="images/hebergements/hotel_mouettes.jpg" class="img_marseille" alt="Hôtel Les mouettes" />
+                                    </picture>
                                     <div class="texte_marseille">
                                         <h3>Hôtel Les mouettes</h3>
                                         <h4>Nuit à partir de 76<strong>€</strong></h4>
-                                        <ul class="etoiles">
+                                        <ul class="etoiles"> 
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
@@ -138,9 +146,12 @@
                         <a href="#" target="_blank">
                             <div class="cartes_marseille">
                                 <figure class="contenu_catre">
-                                    <img src="images/hebergements/hotel-mer.jpg" class="img_marseille" alt="Hôtel de la mer" />
-                                    <img src="images/hebergements/media/hotel-mer_mob.jpg" id="hotel-mer" alt="Hôtel de la mer" />
-                                    <img src="images/hebergements/media/hotel-mer_tab.jpg" class="marseille_tab" alt="Hôtel de la mer" />
+                                    <picture>
+                                        <source media="(min-width: 1209px)" srcset="images/hebergements/hotel-mer.jpg">
+                                        <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/hebergements/media/hotel-mer_tab.jpg">
+                                        <source media="(max-width: 636px)" srcset="images/hebergements/media/hotel-mer_mob.jpg">
+                                        <img src="images/hebergements/hotel-mer.jpg" class="img_marseille" alt="Hôtel de la mer" />
+                                    </picture>
                                     <div class="texte_marseille">
                                         <h3>Hôtel de la mer</h3>
                                         <h4>Nuit à partir de 46<strong>€</strong></h4>
@@ -158,9 +169,12 @@
                         <a href="#" target="_blank">
                             <div class="cartes_marseille">
                                 <figure class="contenu_catre">
-                                    <img src="images/hebergements/auberge_panier.jpg" class="img_marseille" alt="Auberge Le Panier" />
-                                    <img src="images/hebergements/media/auberge_panier_mob.jpg" id="auberge_panier" alt="Auberge Le Panier" />
-                                    <img src="images/hebergements/media/auberge_panier_tab.jpg" class="marseille_tab" alt="Auberge Le Panier" />
+                                    <picture>
+                                        <source media="(min-width: 1209px)" srcset="images/hebergements/auberge_panier.jpg">
+                                        <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/hebergements/media/auberge_panier_tab.jpg">
+                                        <source media="(max-width: 636px)" srcset="images/hebergements/media/auberge_panier_mob.jpg">
+                                        <img src="images/hebergements/auberge_panier.jpg" class="img_marseille" alt="Auberge Le Panier" />
+                                    </picture>
                                     <div class="texte_marseille">
                                         <h3>Auberge Le Panier</h3>
                                         <h4>Nuit à partir de <strong>23€</strong></h4>
@@ -178,9 +192,12 @@
                         <a href="#" target="_blank">
                             <div class="cartes_marseille">
                                 <figure class="contenu_catre">
-                                    <img src="images/hebergements/hotel_amina.jpg" class="img_marseille" alt="Hôtel chez Amina" />
-                                    <img src="images/hebergements/media/hotel_amina_mob.jpg" id="hotel_amina" alt="Hôtel chez Amina" />
-                                    <img src="images/hebergements/media/hotel_amina_tab.jpg" class="marseille_tab" alt="Hôtel chez Amina" />
+                                    <picture>
+                                        <source media="(min-width: 1209px)" srcset="images/hebergements/hotel_amina.jpg">
+                                        <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/hebergements/media/hotel_amina_tab.jpg">
+                                        <source media="(max-width: 636px)" srcset="images/hebergements/media/hotel_amina_mob.jpg">
+                                        <img src="images/hebergements/hotel_amina.jpg" class="img_marseille" alt="Hôtel chez Amina" />
+                                    </picture>
                                     <div class="texte_marseille">
                                         <h3>Hôtel chez Amina</h3>
                                         <h4>Nuit à partir de 96<strong>€</strong></h4>
@@ -199,22 +216,21 @@
                     <div><button type="submit" id="lien_bas">Afficher plus</button></div>
                 </div>
 
-                <div id="hebergements_populaires">
-                    <div id="titre_populaires">
-                        <ul>
-                            <li><h2>Les plus populaires</h2></li>
+                <div id="hebergements_populaires"> <!-- Contient toutes les cartes de ce block pour pouvoir le cibler en CSS -->
+                    <div id="titre_populaires"> <!-- La partie de titre contient deux éléments. <div> appliqué pour la cibler comme un élément à partir de CSS -->
+                        <ul> <!-- Les deux éléments rangés en liste à puces pour les placer correctement -->
+                            <li><h2>Les plus populaires</h2></li> <!-- <h2> est utilisé pour tous les titres de blocks de même importance -->
                             <li><span><i class="fas fa-chart-line"></i></span></li>
                         </ul>
                     </div>
-                    <div id="populaires_cartes">
-                        <a href="#" target="_blank">
+                    <div id="populaires_cartes"> <!-- Contient toutes les cartes de ce block pour pouvoir le cibler en CSS -->
+                        <a href="#" target="_blank"> <!-- Chaque carte d'hébergement va dans la balise <a> pour créer les cartes cliquables dans son intégralité -->
                             <div class="cartes_populaires">
-                                <figure class="contenu_populaire">
-                                    <!-- Dans toute la division id="populaires_cartes" la même photo est utilisé pour toutes les tailles d'écran -->
-                                    <img src="images/hebergements/soleil_matin.jpg" class="img_populaires" alt="Hôtel Le soleil du matin" />
-                                    <div class="texte_populaires">
-                                        <h3>Hôtel Le soleil du matin</h3>
-                                        <h4>Nuit à partir de 128<strong>€</strong></h4>
+                                <figure class="contenu_populaire"> <!-- <figure> utilisé pour toutes les cartes d'hébergements sur le site; les images ont un rôle important dans le contexte -->
+                                    <img src="images/hebergements/soleil_matin.jpg" class="img_populaires" alt="Hôtel Le soleil du matin" /> <!-- Dans toute la division id="populaires_cartes" la même photo est utilisé pour toutes les tailles d'écran -->
+                                    <div class="texte_populaires"> <!-- L'apparence des textes dans les cartes de même block est pareil; le 'class' est utilisé pour cibler tous ces textes le même temps -->
+                                        <h3>Hôtel Le soleil du matin</h3> <!-- <h3> est utilisé pour tous les titres de cartes des hébergements -->
+                                        <h4>Nuit à partir de 128<strong>€</strong></h4> <!-- <h4> est utilisé pour tous les textes de cartes des hébergements -->
                                         <ul class="etoiles">
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
@@ -265,58 +281,75 @@
                     </div>
                 </div>
             </section>
-            <section id="section_activites">
-                <h2>Activités à Marseille</h2>
-                <div id="activites">
-                    <a href="#" target="_blank">
-                        <div class="une_image">
-                            <!-- Dans toute la division id="activites" la première photo inséré est pour la version ordinateur et la deuxième pour la version mobile -->
-                            <img src="images/activites/vieux_port.jpg" class="img_activites" alt="Vieux Port" />
-                            <img src="images/activites/media/vieux_port_mob.jpg" class="img_activites_mob" alt="Vieux Port" />
-                            <img src="images/activites/media/vieux_port_tab.jpg" class="img_activites_tab" alt="Vieux Port" />
-                            <h3>Vieux Port</h3>
+            <section id="section_activites"> <!-- Pour structurer la page; le contenu d'une section va dans cette partie -->
+                <h2>Activités à Marseille</h2> <!-- <h2> est utilisé pour tous les titres de blocks de même importance -->
+                <div id="activites"> <!-- Contient toutes les cartes de ce block pour pouvoir le cibler en CSS -->
+                    <a href="#" target="_blank"> <!-- Chaque carte des activités va dans la balise <a> pour créer les cartes cliquables dans son intégralité -->
+                        <div class="une_image"> <!-- Les catres d'activités avec une image sont dans la même 'class' -->
+                            <picture> <!-- Les photos sont adaptés à chaque taille de l'écran -->
+                                <source media="(min-width: 1209px)" srcset="images/activites/vieux_port.jpg">
+                                <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/activites/media/vieux_port_tab.jpg">
+                                <source media="(max-width: 636px)" srcset="images/activites/media/vieux_port_mob.jpg">
+                                <img src="images/activites/vieux_port.jpg" class="img_activites" alt="Vieux Port" />
+                            </picture>
+                            <h3>Vieux Port</h3> <!-- <h3> est utilisé pour tous les titres de cartes des activités -->
                         </div>
                     </a>
-                    <div id="deux_images1">
-                        <a href="#" target="_blank">
+                    <div id="deux_images1"> <!-- Les catres d'activités avec deux images ont une 'id' unique - sont rangés autremant que les autres -->
+                        <a href="#" target="_blank"> <!-- Chaque carte est cliquable apart et ne pas sa <div> entière -->
                             <div id="fort_pomegues">
-                                <img src="images/activites/fort_pomegues.jpg" class="img_activites" alt="Fort de Pomègues" />
-                                <img src="images/activites/media/fort_pomegues_mob.jpg" class="img_activites_mob" alt="Vieux Port" />
-                                <img src="images/activites/media/fort_pomegues_tab.jpg" class="img_activites_tab" alt="Vieux Port" />
+                                <picture>
+                                    <source media="(min-width: 1209px)" srcset="images/activites/fort_pomegues.jpg">
+                                    <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/activites/media/fort_pomegues_tab.jpg">
+                                    <source media="(max-width: 636px)" srcset="images/activites/media/fort_pomegues_mob.jpg">
+                                    <img src="images/activites/fort_pomegues.jpg" class="img_activites" alt="Fort de Pomègues" />
+                                </picture>
                                 <h3>Fort de Pomègues</h3>
                             </div>
                         </a>
                         <a href="#" target="_blank">
                             <div id="iles_frioul">
-                                <img src="images/activites/iles_frioul.jpg" class="img_activites" alt="Îles du Frioul" />
-                                <img src="images/activites/media/iles_frioul_mob.jpg" class="img_activites_mob" alt="Îles du Frioul" />
-                                <img src="images/activites/media/iles_frioul_tab.jpg" class="img_activites_tab" alt="Îles du Frioul" />
+                                <picture>
+                                    <source media="(min-width: 1209px)" srcset="images/activites/iles_frioul.jpg">
+                                    <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/activites/media/iles_frioul_tab.jpg">
+                                    <source media="(max-width: 636px)" srcset="images/activites/media/iles_frioul_mob.jpg">
+                                    <img src="images/activites/iles_frioul.jpg" class="img_activites" alt="Îles du Frioul" />
+                                </picture>
                                 <h3>Îles du Frioul</h3>
                             </div>
                         </a>
                     </div>
                     <a href="#" target="_blank">
                         <div class="une_image">
-                            <img src="images/activites/parc_calanques.jpg" class="img_activites" alt="Parc National des Calanques" />
-                            <img src="images/activites/media/parc_calanques_mob.jpg" class="img_activites_mob" alt="Parc National des Calanques" />
-                            <img src="images/activites/media/parc_calanques_tab.jpg" class="img_activites_tab" alt="Parc National des Calanques" />
+                            <picture>
+                                <source media="(min-width: 1209px)" srcset="images/activites/parc_calanques.jpg">
+                                <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/activites/media/parc_calanques_tab.jpg">
+                                <source media="(max-width: 636px)" srcset="images/activites/media/parc_calanques_mob.jpg">
+                                <img src="images/activites/parc_calanques.jpg" class="img_activites" alt="Parc National des Calanques" />
+                            </picture>
                             <h3>Parc National des Calanques</h3>
                         </div>
                     </a>
-                    <div id="deux_images2">
-                        <a href="#" target="_blank">
+                    <div id="deux_images2"> <!-- Les catres d'activités avec deux images ont une 'id' unique - sont rangés autremant que les autres -->
+                        <a href="#" target="_blank"> <!-- Chaque carte est cliquable apart et ne pas sa <div> entière -->
                             <div id="nd_garde">
-                                <img src="images/activites/nd_garde.jpg" class="img_activites" alt="Notre-Dame-de-la-Garde" />
-                                <img src="images/activites/media/nd_garde_mob.jpg" class="img_activites_mob" alt="Notre-Dame-de-la-Garde" />
-                                <img src="images/activites/media/nd_garde_tab.jpg" class="img_activites_tab" alt="Notre-Dame-de-la-Garde" />
+                                <picture>
+                                    <source media="(min-width: 1209px)" srcset="images/activites/nd_garde.jpg">
+                                    <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/activites/media/nd_garde_tab.jpg">
+                                    <source media="(max-width: 636px)" srcset="images/activites/media/nd_garde_mob.jpg">
+                                    <img src="images/activites/nd_garde.jpg" class="img_activites" alt="Notre-Dame-de-la-Garde" />
+                                </picture>
                                 <h3>Notre-Dame-de-la-Garde</h3>
                             </div>
                         </a>
                         <a href="#" target="_blank">
                             <div id="parc_longchamp">
-                                <img src="images/activites/parc_longchamp.jpg" class="img_activites" alt="Parc Longchamp" />
-                                <img src="images/activites/media/parc_longchamp_mob.jpg" class="img_activites_mob" alt="Parc Longchamp" />
-                                <img src="images/activites/media/parc_longchamp_tab.jpg" class="img_activites_tab" alt="Parc Longchamp" />
+                                <picture>
+                                    <source media="(min-width: 1209px)" srcset="images/activites/parc_longchamp.jpg">
+                                    <source media="(min-width: 637px) and (max-width: 1208px)" srcset="images/activites/media/parc_longchamp_tab.jpg">
+                                    <source media="(max-width: 636px)" srcset="images/activites/media/parc_longchamp_mob.jpg">
+                                    <img src="images/activites/parc_longchamp.jpg" class="img_activites" alt="Parc Longchamp" />
+                                </picture>
                                 <h3>Parc Longchamp</h3>
                             </div>
                         </a>
@@ -324,12 +357,12 @@
                 </div>
             </section>
         </div>
-        <footer>
+        <footer> <!-- Pour structurer la page; le contenu de footer va dans cette partie -->
             <div id="footer_content">
-                <div class="colonnes_footer" id="colone_apropos">
-                    <ul>
-                        <li><h3>A propos</h3></li>
-                        <li><a href="#">Fonctionnement du site</a></li>
+                <div class="colonnes_footer" id="colone_apropos"> <!-- <class> appliqué pour cibler toutes les colonnes de footer le même temps à partir de CSS -->
+                    <ul> <!-- Les éléments de chaque colonne de footer rangés en liste à puces pour les placer correctement -->
+                        <li><h3>A propos</h3></li> <!-- <h3> est utilisé pour tous les titres de colonnes footer -->
+                        <li><a href="#">Fonctionnement du site</a></li> <!-- <a> appliqué pour créer les liens cliquables -->
                         <li><a href="#">Conditions générales de vente</a></li>
                         <li><a href="#">Données et confidentialité</a></li>
                     </ul>
